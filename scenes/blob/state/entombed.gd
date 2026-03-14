@@ -1,10 +1,17 @@
 extends BlobState
 
-const DAMAGE_COOLDOWN_DURATION: float = 0.8
+const DAMAGE_COOLDOWN_DURATION: float = 0.6
 const SPAWN_IMPULSE_MAGNITUDE: float = 800.0
 
-var _damaged: bool = false
+var _hp: int = 2
 var _damage_cooldown: bool = false
+
+@onready var sound_effect_config_damage: SoundEffectConfig = preload(
+	"res://scenes/blob/sound_effects/statue_damage.tres"
+)
+@onready var sound_effect_config_emerge: SoundEffectConfig = preload(
+	"res://scenes/blob/sound_effects/blob_emerge.tres"
+)
 
 
 # If not on cooldown, further damage the statue on any key press/mouse click
@@ -15,10 +22,11 @@ func handle_input(event: InputEvent) -> void:
 	if not event is InputEventKey and not event is InputEventMouseButton:
 		return
 
-	if !_damaged:
+	if _hp > 0:
+		_hp -= 1
 		push_warning("TODO: Spawn some particles for statue damage.")
 		blob.sprite_statue.region_rect.position.x += 32
-		_damaged = true
+		SoundEffectManager.play_effect_at(sound_effect_config_damage, blob.global_position)
 		_damage_cooldown = true
 		get_tree().create_timer(DAMAGE_COOLDOWN_DURATION).timeout.connect(
 			func() -> void: _damage_cooldown = false
@@ -41,4 +49,5 @@ func exit() -> void:
 	blob.sprite_statue.visible = false
 	blob.sprite.visible = true
 	blob.animation_player.play("jump_up")
+	SoundEffectManager.play_effect_at(sound_effect_config_emerge, blob.global_position)
 	blob.apply_central_impulse(Vector2.UP * SPAWN_IMPULSE_MAGNITUDE)

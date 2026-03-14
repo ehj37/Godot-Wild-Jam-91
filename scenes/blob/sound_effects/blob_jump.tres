@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://co3afvv1yj2je"]
 
-[ext_resource type="AudioStream" uid="uid://f8y5jxvqjuee" path="res://scenes/blob/sound_effects/Blob jump.ogg" id="1_hfrls"]
+[ext_resource type="AudioStream" uid="uid://ghogpm0j07d4" path="res://scenes/blob/sound_effects/blob_jump.ogg" id="1_hfrls"]
 [ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="2_esrgd"]
 
 [resource]

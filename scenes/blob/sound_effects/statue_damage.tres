@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://dryh8h2kgg8m2"]
+
+[ext_resource type="AudioStream" uid="uid://cwjaj88vgpvx1" path="res://scenes/blob/sound_effects/statue_damage.ogg" id="1_nfhwv"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_pger7"]
+
+[resource]
+script = ExtResource("1_pger7")
+type = "statue_damage"
+audio_stream = ExtResource("1_nfhwv")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

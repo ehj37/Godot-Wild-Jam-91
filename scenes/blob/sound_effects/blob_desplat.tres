@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://dup1te3ycxfs8"]
+
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_0vccu"]
+[ext_resource type="AudioStream" uid="uid://c7bmh26w37yi4" path="res://scenes/blob/sound_effects/blob_desplat.ogg" id="1_70cj4"]
+
+[resource]
+script = ExtResource("1_0vccu")
+type = "blob_desplat"
+audio_stream = ExtResource("1_70cj4")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

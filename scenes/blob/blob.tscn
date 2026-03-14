@@ -152,8 +152,8 @@ _data = PackedByteArray("AAADAAUAAAABAAAAgAEAAEABAAC6AQAAUklGRrIBAABXRUJQVlA4TKU
 size_override = Vector2(384, 320)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ydn06"]
-_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAEAAAAAYAQAAUklGRhABAABXRUJQVlA4TAMBAAAvP8APEE+goG0bNtSzz2cK2rZhQz37iKagbRs21LPPZ/MfAAD4/ybH3YkKmSkzdTanAY5DsXUb53+ErGkr+AT5rL8HwhcIcgFCyNov4a1HyJ3jkubeIaL/DNy2baT29iLuGc1/ofFYZR29JR0Ps1XO0ZvdYkfEtO9VxtG/23VtscNnXs1sFTi+3cuDxZrAcXMdx+cyyzi6L7PDNuH4ha8DzBxHrZEDIHIIaKYzOiJKsKq0I1beLQg1d1rPiFcX1tE+d5q/3cPTdz2jrqOTcFWhpcQHWycFoWwz1SqQqQV1O4YdBZBwpbp3HjsPHdGBbKP/LJnTlNAB5fU8G+/YvA7GOEcDAA==")
-size_override = Vector2(64, 64)
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAEAAAACSAQAAUklGRooBAABXRUJQVlA4TH4BAAAvX8APEGeguI2kNnc5H/BFcRtJbe5yPuCL4jaS2tzlfMCX+Q8AAAD//9575o7QYGUEhJhQVarK1bEywHG2vZEyZJgbQJn7nHOwpiZzgFitxpY+WXuB1bYEa7QVGX7iEfZshO/H0yNF9J+B27aNdHvz+ozkv9jUTMt2vErJjqZIWq7jVaSuO9TONIY8pbGOB/4b11Lrk0jHUW/K2TURSRXHk+I4kgd6+cciieKoc8fR12nqqMhXHWU6qo8ih3tRDjxyxyfweAh0EEdRaI6xMc0BAJrDA4E7LNanYnIIShYjgJ5RVgUy1hTsQL72hxUdV4+COwZy9MedDg6eO0YcLKuqVkWG4JCw1vyUYy9qqKcbwSHA0NMuTMGwYfHqqgAy3hiwBqMf7JEC4GGYYwpTuTF7MRWF546RsbFRIKYMCLw1TI3krIpaxQPw1HEOC6uuQjggjznNMee8xdTolnbgibuhOuYwBcDGnIbRHGbKw0HJrLuOGIcN3LG8/mMqx5EA")
+size_override = Vector2(96, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
 size = Vector2(10, 2)
@@ -181,6 +181,10 @@ metadata/_custom_type_script = "uid://dswioianq5o3d"
 [node name="Move" type="Node" parent="StateMachine" unique_id=2147285609]
 script = ExtResource("4_lw42n")
 metadata/_custom_type_script = "uid://bua7o02e55jw4"
+
+[node name="SoundEffectTimer" type="Timer" parent="StateMachine/Move" unique_id=1435310998]
+wait_time = 0.8
+one_shot = true
 
 [node name="Jump" type="Node" parent="StateMachine" unique_id=1800545210]
 script = ExtResource("4_bu0dx")
@@ -262,7 +266,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/blob/lizard_statue.aseprite",
 "source_uid": 8508453758587166130
 }
-metadata/_aseprite_wizard_source_file_hash_ = "25f72b8903ee7fd3292947fd2bcfbfbf"
+metadata/_aseprite_wizard_source_file_hash_ = "e64506bbe0236e8121da1a8194ebbf0f"
 
 [node name="GroundDetector" type="Area2D" parent="." unique_id=1774226816]
 collision_layer = 0
@@ -281,3 +285,4 @@ wait_time = 0.4
 one_shot = true
 
 [connection signal="state_transitioned" from="StateMachine" to="." method="_on_state_machine_state_transitioned"]
+[connection signal="timeout" from="StateMachine/Move/SoundEffectTimer" to="StateMachine/Move" method="_on_sound_effect_timer_timeout"]

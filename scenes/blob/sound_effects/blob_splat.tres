@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://b1e7014ww2ksx"]
+
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_4xxlc"]
+[ext_resource type="AudioStream" uid="uid://bwcgn4my6mtax" path="res://scenes/blob/sound_effects/blob_splat.ogg" id="1_o0qbp"]
+
+[resource]
+script = ExtResource("1_4xxlc")
+type = "blob_splat"
+audio_stream = ExtResource("1_o0qbp")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

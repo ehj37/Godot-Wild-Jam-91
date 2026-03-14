@@ -2,6 +2,11 @@ extends BlobState
 
 const MOVE_FORCE_MAGNITUDE: float = 1520.0
 
+@onready var sound_effect_config_crawl: SoundEffectConfig = preload(
+	"res://scenes/blob/sound_effects/blob_crawl.tres"
+)
+@onready var _sound_effect_timer: Timer = $SoundEffectTimer
+
 
 func physics_update(_delta: float) -> void:
 	if not blob.is_grounded():
@@ -27,3 +32,16 @@ func physics_update(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and blob.jump_cooldown_timer.is_stopped():
 		state_machine.transition_to("Jump")
+
+
+func enter(_data: Dictionary = {}) -> void:
+	_sound_effect_timer.start()
+
+
+func exit() -> void:
+	_sound_effect_timer.stop()
+
+
+func _on_sound_effect_timer_timeout() -> void:
+	SoundEffectManager.play_effect_at(sound_effect_config_crawl, blob.global_position)
+	_sound_effect_timer.start()
