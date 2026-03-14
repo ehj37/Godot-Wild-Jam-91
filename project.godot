@@ -15,6 +15,10 @@ run/main_scene="uid://cygvn17g16qpw"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SoundEffectManager="*uid://c7y7b1a2xvx7g"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=2

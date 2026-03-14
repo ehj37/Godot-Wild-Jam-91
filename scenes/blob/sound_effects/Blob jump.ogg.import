@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f8y5jxvqjuee"
+path="res://.godot/imported/Blob jump.ogg-5b3b9ea024a28994c0ba695ddc111492.oggvorbisstr"
+
+[deps]
+
+source_file="res://scenes/blob/sound_effects/Blob jump.ogg"
+dest_files=["res://.godot/imported/Blob jump.ogg-5b3b9ea024a28994c0ba695ddc111492.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

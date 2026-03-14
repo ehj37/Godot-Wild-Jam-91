@@ -25,6 +25,10 @@ func transition_to(new_state_name: String, data: Dictionary = {}) -> void:
 	new_state.enter(data)
 
 
+func _unhandled_input(event: InputEvent) -> void:
+	current_state.handle_input(event)
+
+
 func _physics_process(delta: float) -> void:
 	current_state.physics_update(delta)
 

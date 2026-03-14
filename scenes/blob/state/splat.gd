@@ -9,4 +9,4 @@ func update(_delta: float) -> void:
 
 
 func enter(_data: Dictionary = {}) -> void:
-	blob.animation_player.play("splat_right")
+	blob.animation_player.play("splat")

@@ -7,6 +7,7 @@ enum MoveInput { LEFT, RIGHT }
 var _pressed_move_inputs: Array[MoveInput]
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sprite_statue: Sprite2D = $SpriteStatue
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var jump_cooldown_timer: Timer = $JumpCooldownTimer
 @onready var _ground_detector: Area2D = $GroundDetector

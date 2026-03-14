@@ -15,4 +15,6 @@ func physics_update(_delta: float) -> void:
 
 
 func enter(_data: Dictionary = {}) -> void:
+	blob.sprite.visible = true
+	blob.sprite_statue.visible = false
 	blob.animation_player.play("idle")

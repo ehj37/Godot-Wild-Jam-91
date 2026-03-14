@@ -2,6 +2,10 @@ extends BlobState
 
 const JUMP_IMPULSE_MAGNITUDE: float = 200.0
 
+var sound_effect_config_jump: SoundEffectConfig = preload(
+	"res://scenes/blob/sound_effects/blob_jump.tres"
+)
+
 
 func enter(_data: Dictionary = {}) -> void:
 	var impulse_direction: Vector2
@@ -16,5 +20,6 @@ func enter(_data: Dictionary = {}) -> void:
 
 	blob.apply_central_impulse(impulse_direction * JUMP_IMPULSE_MAGNITUDE)
 	blob.animation_player.play("jump_right")
+	SoundEffectManager.play_effect_at(sound_effect_config_jump, blob.global_position)
 	state_machine.transition_to("Airborne")
 	blob.jump_cooldown_timer.start()
