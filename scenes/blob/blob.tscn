@@ -164,6 +164,7 @@ collision_layer = 64
 collision_mask = 3
 gravity_scale = 1.5
 lock_rotation = true
+linear_damp = 10.0
 script = ExtResource("1_8afob")
 
 [node name="StateMachine" type="Node" parent="." unique_id=60196734 node_paths=PackedStringArray("initial_state")]
@@ -290,3 +291,4 @@ radius = 35
 
 [connection signal="state_transitioned" from="StateMachine" to="." method="_on_state_machine_state_transitioned"]
 [connection signal="timeout" from="StateMachine/Move/SoundEffectTimer" to="StateMachine/Move" method="_on_sound_effect_timer_timeout"]
+[connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]

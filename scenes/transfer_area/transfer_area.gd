@@ -5,6 +5,8 @@ class_name TransferArea
 extends Area2D
 
 signal focused_area_changed(old_focused_area: TransferArea, new_focused_area: TransferArea)
+signal transfer_requested
+signal transfer_away_requested
 
 const OUTLINE_COLOR: Color = Color.RED
 const FILL_COLOR: Color = Color(Color.RED, 0.5)
@@ -20,6 +22,14 @@ var _transfer_areas: Array[TransferArea] = []
 var _focused_area: TransferArea
 
 @onready var focused_indicator: AnimatedSprite2D = $FocusedIndicator
+
+
+func on_transfer() -> void:
+	transfer_requested.emit()
+
+
+func on_transfer_away() -> void:
+	transfer_away_requested.emit()
 
 
 func get_focused_area() -> TransferArea:

@@ -1,0 +1,201 @@
+[gd_scene format=4 uid="uid://cybj56ytho50h"]
+
+[ext_resource type="Script" uid="uid://do6ss5bl65tt" path="res://scenes/hollow/hollow.gd" id="1_n14vp"]
+[ext_resource type="Script" uid="uid://dfkg3wfggq6m" path="res://scripts/state_machine.gd" id="2_yq0vy"]
+[ext_resource type="Script" uid="uid://cy1dmk5vcxfbq" path="res://scenes/hollow/state/idle.gd" id="3_oxmwc"]
+[ext_resource type="Script" uid="uid://dx256t22l0uuw" path="res://scenes/hollow/state/walk.gd" id="4_geawj"]
+[ext_resource type="Script" uid="uid://bbbjq2gs3ii7u" path="res://scenes/hollow/state/blob.gd" id="5_gcaq2"]
+[ext_resource type="Script" uid="uid://blaa3t274ltlq" path="res://scenes/hollow/state/deblob.gd" id="6_tnb47"]
+[ext_resource type="Script" uid="uid://blx1p0sxbspqy" path="res://scenes/hollow/state/fall.gd" id="7_gcaq2"]
+[ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="7_geawj"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_gcaq2"]
+_data = PackedByteArray("AAADAAUAAAABAAAAwAAAAIAAAAAYAQAAUklGRhABAABXRUJQVlA4TAQBAAAvv8AfECegkG0EaP5ah/VqCAQIYf4/lBASEP6fMU80/wEA/rlIAWIjyXGjFcUEllAAi4lAABPws/knJerABnT/F9H/CbC/5vbeocyEJDF7770jt8xMJCQJ6ceVyGMldCxYxxITsGM3LLA+XufluM7TuLxaO3bD4t3TT216ntp0ndrV+dW5+zJpx25YvMCXN127PLnNPluxipV3j2GG2av1P3xJkCQoM5mQJCQkCbllZiI6FkLHQuSxYsKEJRBYYDdM4zJP4zIvx/XVCiyw27tHw+Y2XcPmNj2Hm9sr5+6QYz4vBg2IQQNug+3Vk/vCCEuuuUEN2zAVSoXK+u4xzDB7tX7oBw==")
+size_override = Vector2(192, 128)
+
+[sub_resource type="Animation" id="Animation_vddip"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_jnve5"]
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_gcaq2"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_tnb47"]
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n14vp"]
+_data = {
+&"blob": SubResource("Animation_vddip"),
+&"deblob": SubResource("Animation_jnve5"),
+&"idle_right": SubResource("Animation_gcaq2"),
+&"step_right": SubResource("Animation_tnb47")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxmwc"]
+radius = 6.0
+height = 22.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_geawj"]
+size = Vector2(4, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcaq2"]
+size = Vector2(2, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnb47"]
+size = Vector2(8, 2)
+
+[node name="Hollow" type="RigidBody2D" unique_id=133354178]
+collision_layer = 0
+collision_mask = 3
+mass = 3.0
+gravity_scale = 1.5
+lock_rotation = true
+script = ExtResource("1_n14vp")
+
+[node name="StateMachine" type="Node" parent="." unique_id=294609362 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_yq0vy")
+initial_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://dfkg3wfggq6m"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1493627239]
+script = ExtResource("3_oxmwc")
+metadata/_custom_type_script = "uid://fnjdndaa6uki"
+
+[node name="Step" type="Node" parent="StateMachine" unique_id=2133682808]
+script = ExtResource("4_geawj")
+metadata/_custom_type_script = "uid://fnjdndaa6uki"
+
+[node name="Blob" type="Node" parent="StateMachine" unique_id=1093039981]
+script = ExtResource("5_gcaq2")
+metadata/_custom_type_script = "uid://fnjdndaa6uki"
+
+[node name="Deblob" type="Node" parent="StateMachine" unique_id=304296132]
+script = ExtResource("6_tnb47")
+metadata/_custom_type_script = "uid://fnjdndaa6uki"
+
+[node name="Fall" type="Node" parent="StateMachine" unique_id=1065486840]
+script = ExtResource("7_gcaq2")
+metadata/_custom_type_script = "uid://fnjdndaa6uki"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2115238483]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_gcaq2")
+offset = Vector2(0, -16)
+hframes = 3
+vframes = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/hollow/hollow.aseprite",
+"source_uid": 771326946792334404
+}
+metadata/_aseprite_wizard_source_file_hash_ = "8bf3c18a7d64d2b8eaac74abb991d735"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=363358435]
+libraries/ = SubResource("AnimationLibrary_n14vp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2069667539]
+position = Vector2(0, -11)
+shape = SubResource("CapsuleShape2D_oxmwc")
+
+[node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("7_geawj")]
+position = Vector2(0, -12)
+radius = 50
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2083804109]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=184948522]
+position = Vector2(5, 0)
+shape = SubResource("RectangleShape2D_geawj")
+
+[node name="ObstacleDetector" type="Area2D" parent="." unique_id=58950772]
+position = Vector2(8, -11)
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleDetector" unique_id=1690274563]
+shape = SubResource("RectangleShape2D_gcaq2")
+
+[node name="GroundDetector" type="Area2D" parent="." unique_id=1025140672]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundDetector" unique_id=125099671]
+shape = SubResource("RectangleShape2D_tnb47")
+
+[node name="StepCooldownTimer" type="Timer" parent="." unique_id=1864557961]
+one_shot = true
+
+[node name="DeblobCavity" type="Marker2D" parent="." unique_id=258644504]
+position = Vector2(6, -15)
+
+[connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]
+[connection signal="transfer_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_requested"]

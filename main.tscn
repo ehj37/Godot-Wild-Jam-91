@@ -1,14 +1,16 @@
 [gd_scene format=4 uid="uid://cygvn17g16qpw"]
 
 [ext_resource type="PackedScene" uid="uid://d1gj2jo2gyod" path="res://scenes/blob/blob.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://btk0enqgjkcvu" path="res://scripts/level.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://b1wwrgrrpv88b" path="res://scenes/ground/ground.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://35jlnp8hxpp1" path="res://scenes/player_camera/player_camera.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cybj56ytho50h" path="res://scenes/hollow/hollow.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=556573738]
+script = ExtResource("1_lquwl")
 
 [node name="Blob" parent="." unique_id=1924219276 instance=ExtResource("1_ig7tw")]
-position = Vector2(-107, 255)
+position = Vector2(197, 251)
 linear_damp = 10.0
 
 [node name="Ground" parent="." unique_id=2125642704 instance=ExtResource("2_0xm2m")]
@@ -17,10 +19,8 @@ tile_map_data = PackedByteArray("AAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAA
 [node name="PlayerCamera" parent="." unique_id=1204636696 node_paths=PackedStringArray("tracking_subject") instance=ExtResource("3_h2yge")]
 tracking_subject = NodePath("../Blob")
 
-[node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("4_1bvp3")]
-position = Vector2(-145, 237)
-radius = 25
+[node name="Hollow" parent="." unique_id=133354178 instance=ExtResource("4_1bvp3")]
+position = Vector2(235, 252)
 
-[node name="TransferArea2" parent="." unique_id=147851620 instance=ExtResource("4_1bvp3")]
-position = Vector2(-100, 226)
-radius = 25
+[node name="Hollow2" parent="." unique_id=1398338222 instance=ExtResource("4_1bvp3")]
+position = Vector2(145, 250)

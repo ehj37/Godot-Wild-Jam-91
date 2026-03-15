@@ -1,18 +1,21 @@
-class_name Blob
+class_name Hollow
 
 extends RigidBody2D
 
 enum MoveInput { LEFT, RIGHT }
 
+var player_controlled: bool = false
 var _pressed_move_inputs: Array[MoveInput]
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var sprite_statue: Sprite2D = $SpriteStatue
+@onready var state_machine: StateMachine = $StateMachine
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var jump_cooldown_timer: Timer = $JumpCooldownTimer
-@onready var _ground_detector: Area2D = $GroundDetector
-@onready var _state_machine_label: Label = $StateMachineLabel
-@onready var _transfer_area: TransferArea = $TransferArea
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var transfer_area: TransferArea = $TransferArea
+@onready var step_cooldown_timer: Timer = $StepCooldownTimer
+@onready var ground_detector: Area2D = $GroundDetector
+@onready var ledge_detector: Area2D = $GroundDetector
+@onready var obstacle_detector: Area2D = $ObstacleDetector
+@onready var deblob_cavity: Marker2D = $DeblobCavity
 
 
 # Returns -1 if no move inputs are pressed
@@ -38,17 +41,9 @@ func _process(_delta: float) -> void:
 		_pressed_move_inputs.erase(MoveInput.RIGHT)
 
 
-func _ready() -> void:
-	TransferManager.transfer(self, _transfer_area)
-
-
-func is_grounded() -> bool:
-	return _ground_detector.has_overlapping_bodies()
-
-
-func _on_state_machine_state_transitioned(state_name: String) -> void:
-	_state_machine_label.text = state_name
+func _on_transfer_area_transfer_requested() -> void:
+	state_machine.transition_to("Blob")
 
 
 func _on_transfer_area_transfer_away_requested() -> void:
-	queue_free()
+	player_controlled = false
