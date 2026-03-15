@@ -94,4 +94,5 @@ deblob={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.96862745, 0.99607843, 1, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
