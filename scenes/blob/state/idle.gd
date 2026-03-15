@@ -6,7 +6,7 @@ func physics_update(_delta: float) -> void:
 		state_machine.transition_to("Airborne")
 		return
 
-	if Input.is_action_just_pressed("jump") and blob.jump_cooldown_timer.is_stopped():
+	if Input.is_action_pressed("jump") and blob.jump_cooldown_timer.is_stopped():
 		state_machine.transition_to("Jump")
 		return
 

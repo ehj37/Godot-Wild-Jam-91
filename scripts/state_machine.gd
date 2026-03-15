@@ -4,10 +4,11 @@ extends Node
 
 signal state_transitioned(state_name: String)
 
-@export var initial_state: State
+@export var initial_state_name: String
 
 var current_state: State
 var _states: Array[State] = []
+var _initial_state: State
 
 
 func transition_to(new_state_name: String, data: Dictionary = {}) -> void:
@@ -43,11 +44,13 @@ func _ready() -> void:
 	for child: State in get_children():
 		_states.append(child)
 		child.state_machine = self
+		if child.name == initial_state_name:
+			_initial_state = child
 
-	if initial_state == null:
+	if _initial_state == null:
 		current_state = _states[0]
-		push_warning("Initial state not set for " + str(owner) + " defaulting to first state.")
+		push_warning("Initial state not found for " + str(owner) + " defaulting to first state.")
 	else:
-		current_state = initial_state
+		current_state = _initial_state
 
 	current_state.enter()

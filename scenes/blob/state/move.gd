@@ -1,6 +1,7 @@
 extends BlobState
 
-const MOVE_FORCE_MAGNITUDE: float = 1520.0
+const MOVE_FORCE_MAGNITUDE: float = 2100.0
+const MOVE_LINEAR_DAMP: float = 10.0
 
 @onready var sound_effect_config_crawl: SoundEffectConfig = preload(
 	"res://scenes/blob/sound_effects/blob_crawl.tres"
@@ -30,15 +31,17 @@ func physics_update(_delta: float) -> void:
 	blob.apply_central_force(move_direction * MOVE_FORCE_MAGNITUDE)
 	blob.animation_player.play("move_right")
 
-	if Input.is_action_just_pressed("jump") and blob.jump_cooldown_timer.is_stopped():
+	if Input.is_action_pressed("jump") and blob.jump_cooldown_timer.is_stopped():
 		state_machine.transition_to("Jump")
 
 
 func enter(_data: Dictionary = {}) -> void:
+	blob.linear_damp = MOVE_LINEAR_DAMP
 	_sound_effect_timer.start()
 
 
 func exit() -> void:
+	blob.linear_damp = 0.0
 	_sound_effect_timer.stop()
 
 

@@ -1,6 +1,6 @@
 extends BlobState
 
-const JUMP_IMPULSE_MAGNITUDE: float = 200.0
+const JUMP_IMPULSE_MAGNITUDE: float = 250.0
 
 @onready var sound_effect_config_jump: SoundEffectConfig = preload(
 	"res://scenes/blob/sound_effects/blob_jump.tres"

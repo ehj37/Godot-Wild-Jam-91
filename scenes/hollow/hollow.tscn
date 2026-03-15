@@ -96,16 +96,16 @@ size = Vector2(2, 20)
 size = Vector2(8, 2)
 
 [node name="Hollow" type="RigidBody2D" unique_id=133354178]
+z_index = -1
 collision_layer = 0
 collision_mask = 3
 mass = 3.0
-gravity_scale = 1.5
 lock_rotation = true
 script = ExtResource("1_n14vp")
 
-[node name="StateMachine" type="Node" parent="." unique_id=294609362 node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=294609362]
 script = ExtResource("2_yq0vy")
-initial_state = NodePath("Idle")
+initial_state_name = "Idle"
 metadata/_custom_type_script = "uid://dfkg3wfggq6m"
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1493627239]

@@ -4,12 +4,14 @@ extends RigidBody2D
 
 enum MoveInput { LEFT, RIGHT }
 
+var initial_state_name: String
 var _pressed_move_inputs: Array[MoveInput]
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_statue: Sprite2D = $SpriteStatue
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var jump_cooldown_timer: Timer = $JumpCooldownTimer
+@onready var _state_machine: StateMachine = $StateMachine
 @onready var _ground_detector: Area2D = $GroundDetector
 @onready var _state_machine_label: Label = $StateMachineLabel
 @onready var _transfer_area: TransferArea = $TransferArea
@@ -40,6 +42,8 @@ func _process(_delta: float) -> void:
 
 func _ready() -> void:
 	TransferManager.transfer(self, _transfer_area)
+	if initial_state_name != "":
+		_state_machine.initial_state_name = initial_state_name
 
 
 func is_grounded() -> bool:
