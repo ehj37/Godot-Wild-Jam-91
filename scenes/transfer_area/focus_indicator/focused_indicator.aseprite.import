@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://jwmqs7a0pao7"
+path="res://.godot/imported/focused_indicator.aseprite-4377b527d095d2bf4f49aaf0e5d318c6.res"
+
+[deps]
+
+source_file="res://scenes/transfer_area/focus_indicator/focused_indicator.aseprite"
+dest_files=["res://.godot/imported/focused_indicator.aseprite-4377b527d095d2bf4f49aaf0e5d318c6.res"]
+
+[params]
+

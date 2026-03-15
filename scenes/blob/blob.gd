@@ -12,6 +12,7 @@ var _pressed_move_inputs: Array[MoveInput]
 @onready var jump_cooldown_timer: Timer = $JumpCooldownTimer
 @onready var _ground_detector: Area2D = $GroundDetector
 @onready var _state_machine_label: Label = $StateMachineLabel
+@onready var _transfer_area: TransferArea = $TransferArea
 
 
 # Returns -1 if no move inputs are pressed
@@ -35,6 +36,10 @@ func _process(_delta: float) -> void:
 			_pressed_move_inputs.append(MoveInput.RIGHT)
 	else:
 		_pressed_move_inputs.erase(MoveInput.RIGHT)
+
+
+func _ready() -> void:
+	TransferManager.set_player_transfer_area(_transfer_area)
 
 
 func is_grounded() -> bool:

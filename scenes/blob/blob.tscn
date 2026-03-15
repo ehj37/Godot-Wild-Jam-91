@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dr1maq6wlujx0" path="res://scenes/blob/state/airborne.gd" id="6_k5wan"]
 [ext_resource type="Script" uid="uid://d1rxfpebmu7y5" path="res://scenes/blob/state/splat.gd" id="7_k5wan"]
 [ext_resource type="Script" uid="uid://b31qgjm0nc4iw" path="res://scenes/blob/state/desplat.gd" id="8_m3us2"]
+[ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="10_6b3j6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k5wan"]
 radius = 3.0
@@ -26,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [26, 27, 28, 29]
+"values": [27, 28, 29, 30]
 }
 
 [sub_resource type="Animation" id="Animation_8t7go"]
@@ -106,7 +107,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_462we"]
-length = 0.2
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -114,10 +115,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [18, 19, 20, 21]
+"values": [18, 19, 20, 21, 22]
 }
 
 [sub_resource type="Animation" id="Animation_m3us2"]
@@ -132,7 +133,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [22, 23, 24, 25]
+"values": [23, 24, 25, 26]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6b3j6"]
@@ -148,8 +149,8 @@ _data = {
 }
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_6b3j6"]
-_data = PackedByteArray("AAADAAUAAAABAAAAgAEAAEABAAC6AQAAUklGRrIBAABXRUJQVlA4TKUBAAAvf8FPEBcw//M///MfgAfptfXGbSSeE3RguB6WwB/4vBSmhrM9AWKcdUYR/YfkSJIiyQYWTh5Nj1j+m/WKRkQdXdiV7wjS5WBs6LB8R3JHbOgQd+3coVW5jq5V6U7coQsdVmnujvgIHT5Xh146pn8d/vvtNvzhGFYszuXk1ThzNNKNsli6I7Rs6MyFxarkzoGEBoZ0qVEn7tQFO5QkXXDHHTnN3rDjzriTO97X0djUmRPPuAN3GOCdacJObegWXuWjgSVsw2Uz/evw33dPt921rOHlO1u2czg6c9fuO7x6Zy/vjnP57nrcUd+tfNejEZpf/b8/mvFwDeOOfHe9+udWvqNa3//L08913l3RMf3r8N/PmzY9m1332Y2vrqe82Nsp1LK0s5AMb4SWZdWnVXIiSwq1Wl0SDnVyyTp1px0bjss9eRyHc6Ya7bgbnecL/8CMO3XRYZAko8MuYReW8oFRW6Z/Hf776yp8Nt0oQ/s7keGUoUvxzi7DbhHsCOxQtqNLatjVaMc93b0aHZbVscO4M30c8DDKKVPCLtwpTx3X8eIY4LUAAA==")
-size_override = Vector2(384, 320)
+_data = PackedByteArray("AAADAAUAAAABAAAAgAEAAIABAADQAQAAUklGRsgBAABXRUJQVlA4TLwBAAAvf8FfEBcw//M///MfgAfptfXGbSSeE3RguB6WwB/4vBSmhrM9gkIy+yii/xDcSFIkeY8xcmAfsf036xGNiDq6sCvfEaTLwZjosHxHckdMdIi7Du7QrlxH1650J+7QjQ6rVLsjvkCHvFaH3jrKP07//ek2/NsxbLG4LidfjTNHI90oi6U7QttEZy4sdiV3DiQ0MKRLjTpxp27YoSTphjueyGn2xI4n407u+FxHY6ozJ15xB+4wwDvThJ2a6BZe5aOBLWzisin/OP33q6dbdcOX72z5HejKXdkd3biDrd7ZfXV3XJfvXI871ncr3/XdCNW3/stfzfh2DeOOfPfRet4137FaP/6Np5+HefeKjvKP03+/37TyrLru1Y2fbS8sqrmEGlGx+yQkQ8XukyF5Uqgdq0siN8LH9TJxIB13GB6XJ/4aZ6lR9xPCsSOkG7+jDsP3ktFhlj6fgWESv5Nv5R+n//661Vu5HUZkh7uQ4ZQh6ujy7GGRYbfwOImykKRcR5fUsKt9LvSkzomO3Wj37thh3Jk7LiE1ypBTpoRduFM+cVzLP07//W0ovLiu6oZu1T+XilN1vbzx5pzisQE=")
+size_override = Vector2(384, 384)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ydn06"]
 _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAEAAAACSAQAAUklGRooBAABXRUJQVlA4TH4BAAAvX8APEGeguI2kNnc5H/BFcRtJbe5yPuCL4jaS2tzlfMCX+Q8AAAD//9575o7QYGUEhJhQVarK1bEywHG2vZEyZJgbQJn7nHOwpiZzgFitxpY+WXuB1bYEa7QVGX7iEfZshO/H0yNF9J+B27aNdHvz+ozkv9jUTMt2vErJjqZIWq7jVaSuO9TONIY8pbGOB/4b11Lrk0jHUW/K2TURSRXHk+I4kgd6+cciieKoc8fR12nqqMhXHWU6qo8ih3tRDjxyxyfweAh0EEdRaI6xMc0BAJrDA4E7LNanYnIIShYjgJ5RVgUy1hTsQL72hxUdV4+COwZy9MedDg6eO0YcLKuqVkWG4JCw1vyUYy9qqKcbwSHA0NMuTMGwYfHqqgAy3hiwBqMf7JEC4GGYYwpTuTF7MRWF546RsbFRIKYMCLw1TI3krIpaxQPw1HEOC6uuQjggjznNMee8xdTolnbgibuhOuYwBcDGnIbRHGbKw0HJrLuOGIcN3LG8/mMqx5EA")
@@ -167,7 +168,7 @@ script = ExtResource("1_8afob")
 
 [node name="StateMachine" type="Node" parent="." unique_id=60196734 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_peg37")
-initial_state = NodePath("Entombed")
+initial_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://dfkg3wfggq6m"
 
 [node name="Entombed" type="Node" parent="StateMachine" unique_id=1444409423]
@@ -214,7 +215,7 @@ libraries/ = SubResource("AnimationLibrary_6b3j6")
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_6b3j6")
 hframes = 6
-vframes = 5
+vframes = 6
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -236,7 +237,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/blob/blob.aseprite",
 "source_uid": 6447877206398014428
 }
-metadata/_aseprite_wizard_source_file_hash_ = "b706bf25287eee095f5105fe3af7b2f2"
+metadata/_aseprite_wizard_source_file_hash_ = "ca042f2402b1b027fe35712ddc9e1bee"
 
 [node name="SpriteStatue" type="Sprite2D" parent="." unique_id=315027220]
 visible = false
@@ -283,6 +284,9 @@ offset_bottom = 23.0
 [node name="JumpCooldownTimer" type="Timer" parent="." unique_id=1201363380]
 wait_time = 0.4
 one_shot = true
+
+[node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("10_6b3j6")]
+radius = 35
 
 [connection signal="state_transitioned" from="StateMachine" to="." method="_on_state_machine_state_transitioned"]
 [connection signal="timeout" from="StateMachine/Move/SoundEffectTimer" to="StateMachine/Move" method="_on_sound_effect_timer_timeout"]
