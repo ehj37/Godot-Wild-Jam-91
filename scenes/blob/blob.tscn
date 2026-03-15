@@ -163,11 +163,13 @@ size = Vector2(10, 2)
 collision_layer = 64
 collision_mask = 3
 mass = 2.0
+can_sleep = false
 lock_rotation = true
 script = ExtResource("1_8afob")
 
 [node name="StateMachine" type="Node" parent="." unique_id=60196734]
 script = ExtResource("2_peg37")
+initial_state_name = "Idle"
 metadata/_custom_type_script = "uid://dfkg3wfggq6m"
 
 [node name="Entombed" type="Node" parent="StateMachine" unique_id=1444409423]
@@ -215,6 +217,7 @@ texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_6b3j6")
 hframes = 6
 vframes = 6
+frame = 27
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -280,6 +283,8 @@ shape = SubResource("RectangleShape2D_8afob")
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="JumpCooldownTimer" type="Timer" parent="." unique_id=1201363380]
 wait_time = 0.8

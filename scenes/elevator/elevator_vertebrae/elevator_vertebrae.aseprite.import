@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://56g8da4nosjg"
+path="res://.godot/imported/elevator_vertebrae.aseprite-94a926456bd21fe4b6b13e826a4549fc.res"
+
+[deps]
+
+source_file="res://scenes/elevator/elevator_vertebrae/elevator_vertebrae.aseprite"
+dest_files=["res://.godot/imported/elevator_vertebrae.aseprite-94a926456bd21fe4b6b13e826a4549fc.res"]
+
+[params]
+

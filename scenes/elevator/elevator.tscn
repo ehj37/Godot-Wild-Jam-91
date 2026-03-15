@@ -1,0 +1,69 @@
+[gd_scene format=4 uid="uid://x52lelscyoxw"]
+
+[ext_resource type="Script" uid="uid://d2o10bh5f6nwj" path="res://scenes/elevator/elevator.gd" id="1_8o2wm"]
+
+[sub_resource type="Curve2D" id="Curve2D_x8gua"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -200)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8o2wm"]
+resource_local_to_scene = true
+size = Vector2(32, 8)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_x8gua"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACWAAAAUklGRo4AAABXRUJQVlA4TIIAAAAvH8ADEC9AEECSQ5PNPs8cCtlGgC5n8EGdv8KJqGkkBbq3pkIQ/rXgYf4DwP67Ew27zgKjSJIUnYUFBT1j4BYEoAD0L4budf+I/itM24bJbk95fkfxyXduPFELgWAJMBYGhovZSIY2sgGDDSKDIiL6Z4xCUEJc3sNrsTGkvLJPzDsb")
+size_override = Vector2(32, 16)
+
+[node name="Elevator" type="Node2D" unique_id=1259950719]
+z_index = 1
+script = ExtResource("1_8o2wm")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1197976498]
+curve = SubResource("Curve2D_x8gua")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=550714923]
+position = Vector2(0, -7.93933)
+rotation = -1.5707964
+progress = 8.0
+rotates = false
+loop = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Path2D/PathFollow2D" unique_id=1586363495]
+rotation = 1.5707964
+collision_layer = 3
+collision_mask = 0
+sync_to_physics = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/AnimatableBody2D" unique_id=438339544]
+shape = SubResource("RectangleShape2D_8o2wm")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/AnimatableBody2D" unique_id=1161050074]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_x8gua")
+offset = Vector2(0, -4)
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/elevator/elevator.aseprite",
+"source_uid": 8111802868763699089
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7f3bf83dcee894b2611b15adb11ffa65"

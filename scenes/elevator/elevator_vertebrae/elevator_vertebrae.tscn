@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bncbgyieh7s3i"]
+
+[ext_resource type="Texture2D" uid="uid://dkjlikem061nt" path="res://scenes/elevator/elevator_vertebrae/elevator_vertebrae.png" id="1_4412m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4412m"]
+texture = ExtResource("1_4412m")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_22mwf"]
+sources/0 = SubResource("TileSetAtlasSource_4412m")
+
+[node name="ElevatorVertebrae" type="TileMapLayer" unique_id=716241819]
+z_index = -9
+tile_set = SubResource("TileSet_22mwf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1233389620]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_4412m")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": false,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/elevator/elevator_vertebrae/elevator_vertebrae.aseprite",
+"source_uid": 2170084411577906400
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5d66f7db531abe374dbbbf5ea0cfdaf0"

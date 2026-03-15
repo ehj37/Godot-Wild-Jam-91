@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dntohcteuigm8"
+path="res://.godot/imported/elevator.aseprite-26a77c0381458db427abfc2bd0b4e27d.res"
+
+[deps]
+
+source_file="res://scenes/elevator/elevator.aseprite"
+dest_files=["res://.godot/imported/elevator.aseprite-26a77c0381458db427abfc2bd0b4e27d.res"]
+
+[params]
+
