@@ -15,7 +15,7 @@ func update(delta: float) -> void:
 			state_machine.transition_to("Splat")
 			return
 
-		var move_input: Blob.MoveInput = blob.get_move_input()
+		var move_input: MoveInputController.MoveInput = MoveInputController.get_move_input()
 		if move_input == -1:
 			state_machine.transition_to("Idle")
 		else:

@@ -9,11 +9,11 @@ const JUMP_IMPULSE_MAGNITUDE: float = 250.0
 
 func enter(_data: Dictionary = {}) -> void:
 	var impulse_direction: Vector2
-	var move_input: Blob.MoveInput = blob.get_move_input()
+	var move_input: MoveInputController.MoveInput = MoveInputController.get_move_input()
 	match move_input:
-		Blob.MoveInput.LEFT:
+		MoveInputController.MoveInput.LEFT:
 			impulse_direction = Vector2(-1, -1).normalized()
-		Blob.MoveInput.RIGHT:
+		MoveInputController.MoveInput.RIGHT:
 			impulse_direction = Vector2(1, -1).normalized()
 		-1:
 			impulse_direction = Vector2.UP

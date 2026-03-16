@@ -10,7 +10,7 @@ func physics_update(_delta: float) -> void:
 		state_machine.transition_to("Jump")
 		return
 
-	if blob.get_move_input() != -1:
+	if MoveInputController.get_move_input() != -1:
 		state_machine.transition_to("Move")
 
 

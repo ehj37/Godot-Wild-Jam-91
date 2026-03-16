@@ -21,11 +21,11 @@ func enter(_data: Dictionary = {}) -> void:
 
 	var step_direction: Vector2
 	if hollow.player_controlled:
-		var move_input: Hollow.MoveInput = hollow.get_move_input()
+		var move_input: MoveInputController.MoveInput = MoveInputController.get_move_input()
 		match move_input:
-			Hollow.MoveInput.LEFT:
+			MoveInputController.MoveInput.LEFT:
 				step_direction = Vector2.LEFT
-			Hollow.MoveInput.RIGHT:
+			MoveInputController.MoveInput.RIGHT:
 				step_direction = Vector2.RIGHT
 	else:
 		var not_going_off_ledge: bool = hollow.ledge_detector.has_overlapping_bodies()
