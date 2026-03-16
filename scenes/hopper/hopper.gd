@@ -12,6 +12,7 @@ var player_controlled: bool = false
 @onready var transfer_area: TransferArea = $TransferArea
 @onready var ground_detector: Area2D = $GroundDetector
 @onready var hop_cooldown_timer: Timer = $HopCooldownTimer
+@onready var hop_progress_bar: ProgressBar = $HopProgressBar
 @onready var _state_machine: StateMachine = $StateMachine
 
 

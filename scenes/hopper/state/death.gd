@@ -11,4 +11,9 @@ func update(_delta: float) -> void:
 
 func enter(_data: Dictionary = {}) -> void:
 	hopper.animation_player.play("death")
+	SoundEffectManager.play_effect_at(_get_death_sound_effect(), hopper.global_position)
 	hopper.spawn_blob()
+
+
+func _get_death_sound_effect() -> SoundEffectConfig:
+	return load("res://scenes/hopper/sound_effects/hopper_death.tres")

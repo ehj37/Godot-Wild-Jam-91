@@ -137,7 +137,13 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryboi"]
-size = Vector2(6, 2)
+size = Vector2(14, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecc3n"]
+bg_color = Color(0, 0, 0, 0.42745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqqt7"]
+bg_color = Color(0.7254902, 0.011764706, 0.26666668, 1)
 
 [node name="Hopper" type="RigidBody2D" unique_id=1862934551]
 collision_layer = 0
@@ -226,6 +232,24 @@ shape = SubResource("RectangleShape2D_ryboi")
 [node name="HopCooldownTimer" type="Timer" parent="." unique_id=904604158]
 wait_time = 0.4
 one_shot = true
+
+[node name="HopProgressBar" type="ProgressBar" parent="." unique_id=781272640]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -22.0
+offset_right = 10.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ecc3n")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rqqt7")
+max_value = 1.0
+show_percentage = false
 
 [connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]
 [connection signal="transfer_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_requested"]

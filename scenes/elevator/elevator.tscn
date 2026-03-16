@@ -14,7 +14,7 @@ resource_local_to_scene = true
 size = Vector2(32, 8)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_x8gua"]
-_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACWAAAAUklGRo4AAABXRUJQVlA4TIIAAAAvH8ADEC9AEECSQ5PNPs8cCtlGgC5n8EGdv8KJqGkkBbq3pkIQ/rXgYf4DwP67Ew27zgKjSJIUnYUFBT1j4BYEoAD0L4budf+I/itM24bJbk95fkfxyXduPFELgWAJMBYGhovZSIY2sgGDDSKDIiL6Z4xCUEJc3sNrsTGkvLJPzDsb")
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACYAAAAUklGRpAAAABXRUJQVlA4TIQAAAAvH8ADEC9AEECSQ5PNPs8cCtlGgC5n8EGdv8KJqGkkBbq3pkIQ/rXgYf4DwP67Ew27zgKj2Lab0AykKHg/Avq+C6D5F5MAK/YR/VeYtg2T3Z4y/Y7sk+Ye+MTeCARHgHWwsCragWRp4KahoCyyAmVkrN/RCIKxl/cVJBuYSu153rjfeQA=")
 size_override = Vector2(32, 16)
 
 [node name="Elevator" type="Node2D" unique_id=1259950719]
@@ -25,9 +25,9 @@ script = ExtResource("1_8o2wm")
 curve = SubResource("Curve2D_x8gua")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=550714923]
-position = Vector2(0, -7.93933)
+position = Vector2(0, -159.01422)
 rotation = -1.5707964
-progress = 8.0
+progress = 159.0
 rotates = false
 loop = false
 
@@ -66,4 +66,4 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/elevator/elevator.aseprite",
 "source_uid": 8111802868763699089
 }
-metadata/_aseprite_wizard_source_file_hash_ = "7f3bf83dcee894b2611b15adb11ffa65"
+metadata/_aseprite_wizard_source_file_hash_ = "24c7fdedf13debb929f0d39ab149052c"

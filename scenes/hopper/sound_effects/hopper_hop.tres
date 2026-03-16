@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://n1k22v6vt3t5"]
+
+[ext_resource type="AudioStream" uid="uid://bwuw64s6u5hr" path="res://scenes/hopper/sound_effects/hopper_hop.ogg" id="1_e7k4k"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="2_m4c2f"]
+
+[resource]
+script = ExtResource("2_m4c2f")
+type = "hopper_hop"
+audio_stream = ExtResource("1_e7k4k")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"
