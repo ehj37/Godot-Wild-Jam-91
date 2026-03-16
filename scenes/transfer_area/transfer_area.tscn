@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://caltl1eudwk3g" path="res://scenes/transfer_area/transfer_area.gd" id="1_djqcg"]
 [ext_resource type="PackedScene" uid="uid://c4krlyh4tv0yt" path="res://scenes/transfer_area/focus_indicator/focused_indicator.tscn" id="2_s8e6h"]
+[ext_resource type="PackedScene" uid="uid://lf4eog6h6uhu" path="res://scenes/transfer_area/unfocused_indicator/unfocused_indicator.tscn" id="3_q0uui"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s8e6h"]
 resource_local_to_scene = true
@@ -69,6 +70,8 @@ animations = [{
 
 [node name="TransferArea" type="Area2D" unique_id=1022541394]
 z_index = 1
+collision_layer = 32
+collision_mask = 32
 script = ExtResource("1_djqcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=292256760]
@@ -77,6 +80,9 @@ shape = SubResource("CircleShape2D_s8e6h")
 [node name="FocusedIndicator" parent="." unique_id=333244696 instance=ExtResource("2_s8e6h")]
 visible = false
 sprite_frames = SubResource("SpriteFrames_spmns")
+
+[node name="UnfocusedIndicator" parent="." unique_id=1824838776 instance=ExtResource("3_q0uui")]
+visible = false
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://lf4eog6h6uhu"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_dxwq7"]
+_data = PackedByteArray("AAADAAUAAAABAAAABAAAAAQAAAAqAAAAUklGRiIAAABXRUJQVlA4TBUAAAAvA8AAEA8wQXM7/mMZ8LjBQ0T/wwAA")
+size_override = Vector2(4, 4)
+
+[node name="UnfocusedIndicator" type="Sprite2D" unique_id=1824838776]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_dxwq7")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/transfer_area/unfocused_indicator/unfocused_indicator.aseprite",
+"source_uid": 3750348921186294763
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3881e3f8f430255215c77acf565611af"

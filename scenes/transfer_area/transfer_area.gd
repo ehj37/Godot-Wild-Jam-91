@@ -4,12 +4,9 @@ class_name TransferArea
 
 extends Area2D
 
-signal focused_area_changed(old_focused_area: TransferArea, new_focused_area: TransferArea)
+signal transfer_areas_changed
 signal transfer_requested
 signal transfer_away_requested
-
-const OUTLINE_COLOR: Color = Color.RED
-const FILL_COLOR: Color = Color(Color.RED, 0.5)
 
 @export var radius: int:
 	set(new_value):
@@ -18,10 +15,11 @@ const FILL_COLOR: Color = Color(Color.RED, 0.5)
 		var circle_shape: CircleShape2D = collision_shape.shape
 		circle_shape.radius = radius
 
-var _transfer_areas: Array[TransferArea] = []
-var _focused_area: TransferArea
+var connected_transfer_areas: Array[TransferArea] = []
+var focused_area: TransferArea
 
 @onready var focused_indicator: AnimatedSprite2D = $FocusedIndicator
+@onready var unfocused_indicator: Sprite2D = $UnfocusedIndicator
 
 
 func on_transfer() -> void:
@@ -32,34 +30,37 @@ func on_transfer_away() -> void:
 	transfer_away_requested.emit()
 
 
-func get_focused_area() -> TransferArea:
-	return _focused_area
+func get_unfocused_areas() -> Array[TransferArea]:
+	return connected_transfer_areas.filter(
+		func(ta: TransferArea) -> bool: return ta != focused_area
+	)
 
 
 func cycle_focused_area() -> void:
-	if _focused_area == null || _transfer_areas.size() == 1:
+	if focused_area == null || connected_transfer_areas.size() == 1:
 		return
 
-	var focused_area_i: int = _transfer_areas.find(_focused_area)
-	var old_focused_area: TransferArea = _focused_area
-	var new_focused_area_i: int = (focused_area_i + 1) % _transfer_areas.size()
-	var new_focused_area: TransferArea = _transfer_areas[new_focused_area_i]
-	_focused_area = new_focused_area
+	var focused_area_i: int = connected_transfer_areas.find(focused_area)
+	var new_focused_area_i: int = (focused_area_i + 1) % connected_transfer_areas.size()
+	var new_focused_area: TransferArea = connected_transfer_areas[new_focused_area_i]
+	focused_area = new_focused_area
 
-	focused_area_changed.emit(old_focused_area, new_focused_area)
+	transfer_areas_changed.emit()
 
 
 func show_focused_indicator() -> void:
 	focused_indicator.visible = true
+	unfocused_indicator.visible = false
 
 
-func hide_focused_indicator() -> void:
+func show_unfocused_indicator() -> void:
 	focused_indicator.visible = false
+	unfocused_indicator.visible = true
 
 
-func _draw() -> void:
-	draw_circle(Vector2.ZERO, radius, FILL_COLOR, true)
-	draw_circle(Vector2.ZERO, radius, OUTLINE_COLOR, false)
+func hide_indicators() -> void:
+	focused_indicator.visible = false
+	unfocused_indicator.visible = false
 
 
 func _ready() -> void:
@@ -72,18 +73,19 @@ func _ready() -> void:
 
 
 func _on_area_entered(area: TransferArea) -> void:
-	_transfer_areas.append(area)
-	if _focused_area == null:
-		_focused_area = area
-		focused_area_changed.emit(null, area)
+	connected_transfer_areas.append(area)
+	if focused_area == null:
+		focused_area = area
+
+	transfer_areas_changed.emit()
 
 
 func _on_area_exited(area: TransferArea) -> void:
-	if area == _focused_area:
-		if _transfer_areas.size() > 1:
+	if area == focused_area:
+		if connected_transfer_areas.size() > 1:
 			cycle_focused_area()
 		else:
-			_focused_area = null
-			focused_area_changed.emit(area, null)
+			focused_area = null
 
-	_transfer_areas.erase(area)
+	connected_transfer_areas.erase(area)
+	transfer_areas_changed.emit()

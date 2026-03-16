@@ -1,296 +1,147 @@
 [gd_scene format=3 uid="uid://4ryu7oqg0f7j"]
 
 [ext_resource type="Script" uid="uid://bltw1mstbfjm3" path="res://scenes/transfer_mode_manager/transfer_mode_manager.gd" id="1_byknq"]
-[ext_resource type="Shader" uid="uid://cxn5y7bpdt55n" path="res://scenes/transfer_mode_manager/minimal_crt.gdshader" id="2_ds7i1"]
+[ext_resource type="Shader" uid="uid://cci0yxgfbw1wf" path="res://scenes/transfer_mode_manager/aberration_vignette.gdshader" id="2_76575"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kjky2"]
-shader = ExtResource("2_ds7i1")
-shader_parameter/scanline_color = Color(0, 0, 0, 0)
-shader_parameter/flicker_color = Color(0, 0, 0, 0)
-shader_parameter/scanlines_count = 0.0
-shader_parameter/scanlines_intensity = 0.01
-shader_parameter/flicker_speed = 0.0
-shader_parameter/flicker_intensity = 0.02000000095
-shader_parameter/color_offset = 0.0
-shader_parameter/blur = 0.0
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gtk3"]
+shader = ExtResource("2_76575")
+shader_parameter/r_displacement = Vector2(0, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(0, 0)
+shader_parameter/height = 1.0
+shader_parameter/width = 1.0
+shader_parameter/fade = 1.0
 
 [sub_resource type="Animation" id="Animation_kjky2"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/flicker_speed")
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/r_displacement")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/color_offset")
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/b_displacement")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/blur")
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [1.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/scanline_color")
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/width")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0)]
+"values": [1.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:material:shader_parameter/flicker_color")
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/fade")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect:material:shader_parameter/scanlines_count")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_w1vh5"]
-resource_name = "hide"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/scanline_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.059999987),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/flicker_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.059999987),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/scanlines_count")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.059999987),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [10.0, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/scanlines_intensity")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.01]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:material:shader_parameter/flicker_speed")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.059999987),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [2.0, 0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect:material:shader_parameter/flicker_intensity")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.02000000095]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("ColorRect:material:shader_parameter/color_offset")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.059999987),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 0.0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect:material:shader_parameter/blur")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.059999987),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.15, 0.0]
+"values": [1.0]
 }
 
 [sub_resource type="Animation" id="Animation_ds7i1"]
 resource_name = "show"
+length = 0.08
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/scanline_color")
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/r_displacement")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.18),
+"times": PackedFloat32Array(0, 0.08),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+"values": [Vector2(0, 0), Vector2(3, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/flicker_color")
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/b_displacement")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.18),
+"times": PackedFloat32Array(0, 0.08),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+"values": [Vector2(0, 0), Vector2(-3, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/scanlines_count")
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.18),
+"times": PackedFloat32Array(0, 0.08),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 10.0]
+"values": [1.0, 0.7]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/scanlines_intensity")
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/width")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.18),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.08),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.01]
+"values": [1.0, 0.5]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:material:shader_parameter/flicker_speed")
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/fade")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.18),
+"times": PackedFloat32Array(0, 0.08),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 2.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect:material:shader_parameter/flicker_intensity")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0.18),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.02000000095]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("ColorRect:material:shader_parameter/color_offset")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.18),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect:material:shader_parameter/blur")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.18),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.15]
+"values": [1.0, 0.7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kjky2"]
 _data = {
 &"RESET": SubResource("Animation_kjky2"),
-&"hide": SubResource("Animation_w1vh5"),
 &"show": SubResource("Animation_ds7i1")
 }
 
@@ -298,7 +149,7 @@ _data = {
 script = ExtResource("1_byknq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1210456346]
-material = SubResource("ShaderMaterial_kjky2")
+material = SubResource("ShaderMaterial_4gtk3")
 offset_right = 320.0
 offset_bottom = 180.0
 

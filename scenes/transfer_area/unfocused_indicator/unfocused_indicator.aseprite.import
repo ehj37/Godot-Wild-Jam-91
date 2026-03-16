@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://btoxx02uns83p"
+path="res://.godot/imported/unfocused_indicator.aseprite-b8a86fbce6f99c3781f53c0a71446bbe.res"
+
+[deps]
+
+source_file="res://scenes/transfer_area/unfocused_indicator/unfocused_indicator.aseprite"
+dest_files=["res://.godot/imported/unfocused_indicator.aseprite-b8a86fbce6f99c3781f53c0a71446bbe.res"]
+
+[params]
+

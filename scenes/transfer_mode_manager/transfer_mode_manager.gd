@@ -33,16 +33,12 @@ func _process(_delta: float) -> void:
 
 
 func _exit_transfer_mode() -> void:
-	animation_player.play("hide")
-	Engine.time_scale = 1.0
-	AudioServer.playback_speed_scale = 1.0
+	animation_player.play("show", -1, -1.0, true)
 	_in_transfer_mode = false
 	transfer_mode_exited.emit()
 
 
 func _enter_transfer_mode() -> void:
-	animation_player.play("show")
-	Engine.time_scale = TRANSFER_MODE_TIME_SCALE
-	AudioServer.playback_speed_scale = TRANSFER_MODE_TIME_SCALE
+	animation_player.play("show", -1, 1.0)
 	_in_transfer_mode = true
 	transfer_mode_entered.emit()

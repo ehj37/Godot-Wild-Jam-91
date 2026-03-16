@@ -213,7 +213,8 @@ shape = SubResource("CapsuleShape2D_ecc3n")
 libraries/ = SubResource("AnimationLibrary_vcw5p")
 
 [node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("8_ryboi")]
-radius = 35
+position = Vector2(0, -5)
+radius = 45
 
 [node name="GroundDetector" type="Area2D" parent="." unique_id=1413988732]
 collision_layer = 0

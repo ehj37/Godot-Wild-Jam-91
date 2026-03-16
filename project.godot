@@ -85,6 +85,7 @@ deblob={
 
 2d_physics/layer_1="Obstacle"
 2d_physics/layer_2="Ground"
+2d_physics/layer_6="TransferArea"
 2d_physics/layer_7="Player"
 
 [physics]
