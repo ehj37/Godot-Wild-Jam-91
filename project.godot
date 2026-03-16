@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*uid://ft4sinv1gwb8"
+MoveInputController="*uid://dim67xslt7u2k"
 SoundEffectManager="*uid://c7y7b1a2xvx7g"
 TransferModeManager="*uid://4ryu7oqg0f7j"
 TransferManager="*uid://evdgef3s26jn"

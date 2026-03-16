@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://o6s1vtgcpail"
+path="res://.godot/imported/hopper.aseprite-e27a87fe03b3193ecd3a703c2692d57c.res"
+
+[deps]
+
+source_file="res://scenes/hopper/hopper.aseprite"
+dest_files=["res://.godot/imported/hopper.aseprite-e27a87fe03b3193ecd3a703c2692d57c.res"]
+
+[params]
+
