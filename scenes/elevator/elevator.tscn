@@ -25,9 +25,9 @@ script = ExtResource("1_8o2wm")
 curve = SubResource("Curve2D_x8gua")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=550714923]
-position = Vector2(0, -159.01422)
+position = Vector2(0, -200)
 rotation = -1.5707964
-progress = 159.0
+progress = 200.0
 rotates = false
 loop = false
 
@@ -66,4 +66,4 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/elevator/elevator.aseprite",
 "source_uid": 8111802868763699089
 }
-metadata/_aseprite_wizard_source_file_hash_ = "24c7fdedf13debb929f0d39ab149052c"
+metadata/_aseprite_wizard_source_file_hash_ = "fcde1bad8093b04a80882d29a3792b01"

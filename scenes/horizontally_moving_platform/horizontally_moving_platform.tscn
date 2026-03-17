@@ -1,0 +1,66 @@
+[gd_scene format=4 uid="uid://c2t6601vlgkt3"]
+
+[ext_resource type="Script" uid="uid://d0yf00hwd6658" path="res://scenes/horizontally_moving_platform/horizontally_moving_platform.gd" id="1_1y40a"]
+
+[sub_resource type="Curve2D" id="Curve2D_1y40a"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1y40a"]
+size = Vector2(32, 8)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_1y40a"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACcAAAAUklGRpQAAABXRUJQVlA4TIcAAAAvH8ADEC9AEECSQ5PNPs8cCtlGgC5n8EGdv8KJqGkkBbq3pkIQ/rXgYf4DwP67Ew27zgKj2raVIAm+FTjrBfhYgG8BkNe/DDJiHtF/BQkCIBhjut+h5h3VTV8Ixpi9QYUMAskbictSlgfrsowRMg8Exu+1bBKZLAjeyLXV9fZaaqqlnoq+cwAA")
+size_override = Vector2(32, 16)
+
+[node name="HorizontallyMovingPlatform" type="Node2D" unique_id=461234372]
+script = ExtResource("1_1y40a")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=2059828655]
+curve = SubResource("Curve2D_1y40a")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1779199319]
+z_index = 1
+position = Vector2(81.99786, 0)
+progress = 82.0
+rotates = false
+loop = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Path2D/PathFollow2D" unique_id=141784064]
+collision_layer = 3
+collision_mask = 0
+sync_to_physics = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/AnimatableBody2D" unique_id=899673392]
+shape = SubResource("RectangleShape2D_1y40a")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/AnimatableBody2D" unique_id=1155979499]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_1y40a")
+offset = Vector2(0, -4)
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/horizontally_moving_platform/horizontally_moving_platform.aseprite",
+"source_uid": 2253034403930680769
+}
+metadata/_aseprite_wizard_source_file_hash_ = "b3f42e6787ac0d6ee4e32469e88f786c"

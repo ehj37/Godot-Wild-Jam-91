@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c7s7lwydd4jk6"]
+
+[ext_resource type="Texture2D" uid="uid://c3m11gansp44a" path="res://scenes/horizontally_moving_platform/cable/cable.png" id="1_biows"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_biows"]
+texture = ExtResource("1_biows")
+texture_region_size = Vector2i(16, 8)
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_es4px"]
+tile_size = Vector2i(16, 8)
+sources/0 = SubResource("TileSetAtlasSource_biows")
+
+[node name="Cable" type="TileMapLayer" unique_id=1051447385]
+tile_set = SubResource("TileSet_es4px")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=982037465]
+visible = false
+z_index = -9
+texture_filter = 1
+texture = ExtResource("1_biows")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": false,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/horizontally_moving_platform/cable/cable.aseprite",
+"source_uid": 2334262073534091020
+}
+metadata/_aseprite_wizard_source_file_hash_ = "2052288a0551ec729c4ec059cd63defe"
