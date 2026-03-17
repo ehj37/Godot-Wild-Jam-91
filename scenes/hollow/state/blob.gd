@@ -14,3 +14,4 @@ func exit() -> void:
 	TransferManager.transfer(hollow, hollow.transfer_area)
 	TransferModeManager.enable_transfer_mode()
 	hollow.player_controlled = true
+	hollow.sprite_blob.visible = true

@@ -10,22 +10,38 @@
 [ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="7_geawj"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_gcaq2"]
-_data = PackedByteArray("AAADAAUAAAABAAAAwAAAAIAAAAAYAQAAUklGRhABAABXRUJQVlA4TAQBAAAvv8AfECegkG0EaP5ah/VqCAQIYf4/lBASEP6fMU80/wEA/rlIAWIjyXGjFcUEllAAi4lAABPws/knJerABnT/F9H/CbC/5vbeocyEJDF7770jt8xMJCQJ6ceVyGMldCxYxxITsGM3LLA+XufluM7TuLxaO3bD4t3TT216ntp0ndrV+dW5+zJpx25YvMCXN127PLnNPluxipV3j2GG2av1P3xJkCQoM5mQJCQkCbllZiI6FkLHQuSxYsKEJRBYYDdM4zJP4zIvx/XVCiyw27tHw+Y2XcPmNj2Hm9sr5+6QYz4vBg2IQQNug+3Vk/vCCEuuuUEN2zAVSoXK+u4xzDB7tX7oBw==")
-size_override = Vector2(192, 128)
+_data = PackedByteArray("AAADAAUAAAABAAAAAAEAAAABAADKAQAAUklGRsIBAABXRUJQVlA4TLYBAAAv/8A/EB8gJCBTumQJAUkS/v+ckIBMGaCZYv6DsEsdSKuttxEjT3oMYRjE0AZF8HzSDwHYImzbni1vbyei/xDcSFIkeXePIXLgE+1foUd27qgWgzuqd7m4o3qXIdP6LnRW7zCSOrljedeJvvcdza7y40qdr9LyjguJ3WDXDXWu/qFArygKOnDH16DVcrbc4T+cDttvd0dKutnQ8X/RR/bdYiDjMOSYITwOusEd3NEpAwVKdexCJx+HgzonHDSLXRM7uGuRsat9ZaycreMOPM6m++UOdoM6d3BnrRSJCTPH4SuHnVHhZq9AjnxqR7WxuMOX2TLjjmVWLTVxmQ7q4E46joHeoPjoP6eP7NyxzG5ADOLLUp06hbN4BwoN6iQpkkKug5zoAWfeoAs7SSBnVu5qm9kE3W/XMaxYiqSEer0bvCzRS1vsRM6XNXbEBLU1Xs7K3/hXobhjO/sqYEcr7Uh96NwqUIqOQ050ffC/00eO3VzVM4WsmusGd1QzdRA6N3M9VH9nwlErpOMrY3rYTtV/62polJu47L4tocEd3zgv5+qb2VdIm29b22Cwm9rbDqU++jvi0QA=")
+size_override = Vector2(256, 256)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_tnb47"]
+_data = PackedByteArray("AAADAAUAAAABAAAAAAEAAAABAADEAAAAUklGRrwAAABXRUJQVlA4TK8AAAAv/8A/EBcw//M///MfgAfHkSRJTXPMX9dgz5qgi8sA+SOvm+3mSxDRfwdu2zgSt3cN7l6B4+gUvEOtJJX14+LsHQPvkAveIR8XeIdgXOap4HRyesi7HtS3umvcfccq71qplHcl1Qi6Tm6n4hfMpXpcwY3Mk2tYRm7QMA1f1YtKoAbQ6Rvqn4l7qmHDFDgbm56j2/fXmI2jWdmBxn1nwKyot8+EefpP9n9Z2jU4Zk0AAA==")
+size_override = Vector2(256, 256)
 
 [sub_resource type="Animation" id="Animation_vddip"]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteBlob:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [2, 3, 4]
+"values": [8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHollow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [9, 10, 9]
 }
 
 [sub_resource type="Animation" id="Animation_jnve5"]
@@ -33,45 +49,81 @@ length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteBlob:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [5]
+"values": [11, 12, 13]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHollow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [11, 12, 13]
 }
 
 [sub_resource type="Animation" id="Animation_gcaq2"]
-length = 0.1
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteBlob:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHollow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
 }
 
 [sub_resource type="Animation" id="Animation_tnb47"]
-length = 0.25
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteBlob:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [1]
+"values": [4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHollow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n14vp"]
@@ -129,14 +181,15 @@ metadata/_custom_type_script = "uid://fnjdndaa6uki"
 script = ExtResource("7_gcaq2")
 metadata/_custom_type_script = "uid://fnjdndaa6uki"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2115238483]
+[node name="SpriteHollow" type="Sprite2D" parent="." unique_id=2115238483]
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_gcaq2")
 offset = Vector2(0, -16)
-hframes = 3
-vframes = 2
-frame = 2
+hframes = 4
+vframes = 4
+frame = 1
 metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
 "pending_changes": {}
 }
 metadata/_aseprite_wizard_config_ = {
@@ -146,7 +199,7 @@ metadata/_aseprite_wizard_config_ = {
 "embed_tex": true,
 "i_mode": 0,
 "keep_anim_length": false,
-"layers": [],
+"layers": ["hollow"],
 "o_ex_p": "",
 "o_folder": "",
 "o_name": "",
@@ -157,7 +210,39 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/hollow/hollow.aseprite",
 "source_uid": 771326946792334404
 }
-metadata/_aseprite_wizard_source_file_hash_ = "8bf3c18a7d64d2b8eaac74abb991d735"
+metadata/_aseprite_wizard_source_file_hash_ = "1234b99478a03730b032aba0483f6776"
+
+[node name="SpriteBlob" type="Sprite2D" parent="." unique_id=431600101]
+visible = false
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_tnb47")
+offset = Vector2(0, -16)
+hframes = 4
+vframes = 4
+frame = 1
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": ["blob"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/hollow/hollow.aseprite",
+"source_uid": 771326946792334404
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1234b99478a03730b032aba0483f6776"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=363358435]
 libraries/ = SubResource("AnimationLibrary_n14vp")
@@ -197,7 +282,7 @@ shape = SubResource("RectangleShape2D_tnb47")
 one_shot = true
 
 [node name="DeblobCavity" type="Marker2D" parent="." unique_id=258644504]
-position = Vector2(6, -15)
+position = Vector2(10, -15)
 
 [connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]
 [connection signal="transfer_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_requested"]

@@ -31,4 +31,5 @@ func enter(_data: Dictionary = {}) -> void:
 
 func exit() -> void:
 	hollow.player_controlled = false
+	hollow.sprite_blob.visible = false
 	TransferModeManager.enable_transfer_mode()

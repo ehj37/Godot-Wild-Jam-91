@@ -53,5 +53,6 @@ func enter(_data: Dictionary = {}) -> void:
 		hollow.deblob_cavity.position.x = abs(hollow.deblob_cavity.position.x)
 
 	hollow.sprite.flip_h = step_direction.x < 0
+	hollow.sprite_blob.flip_h = hollow.sprite.flip_h
 	hollow.apply_central_impulse(step_direction * STEP_IMPULSE_MAGNITUDE)
 	hollow.step_cooldown_timer.start()
