@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://bjnttptsaba4"]
+
+[ext_resource type="AudioStream" uid="uid://c5aed832307o7" path="res://scenes/hollow/sound_effects/hollow_step.ogg" id="1_ujvqt"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_ym4k0"]
+
+[resource]
+script = ExtResource("1_ym4k0")
+type = "hollow_step"
+audio_stream = ExtResource("1_ujvqt")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

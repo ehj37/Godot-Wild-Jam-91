@@ -217,6 +217,7 @@ texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_6b3j6")
 hframes = 6
 vframes = 6
+frame = 27
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }

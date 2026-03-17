@@ -34,6 +34,7 @@ func handle_input(event: InputEvent) -> void:
 	else:
 		push_warning("TODO: Spawn some particles for statue destroy.")
 		state_machine.transition_to("Airborne")
+		blob.animation_player.play("jump_up")
 
 
 func enter(_data: Dictionary = {}) -> void:

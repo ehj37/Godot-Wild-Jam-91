@@ -55,4 +55,9 @@ func enter(_data: Dictionary = {}) -> void:
 	hollow.sprite.flip_h = step_direction.x < 0
 	hollow.sprite_blob.flip_h = hollow.sprite.flip_h
 	hollow.apply_central_impulse(step_direction * STEP_IMPULSE_MAGNITUDE)
+	SoundEffectManager.play_effect_at(_get_step_sound_effect(), hollow.global_position)
 	hollow.step_cooldown_timer.start()
+
+
+func _get_step_sound_effect() -> SoundEffectConfig:
+	return load("res://scenes/hollow/sound_effects/hollow_step.tres")

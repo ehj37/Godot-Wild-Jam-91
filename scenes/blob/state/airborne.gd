@@ -30,8 +30,5 @@ func update(delta: float) -> void:
 
 
 func enter(_data: Dictionary = {}) -> void:
-	if blob.linear_velocity.x == 0:
-		blob.animation_player.play("jump_up")
-
 	_fall_animation_played = false
 	_airborne_time = 0.0

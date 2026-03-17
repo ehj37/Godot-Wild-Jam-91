@@ -27,6 +27,12 @@ func _physics_process(_delta: float) -> void:
 
 	if path_follow.progress_ratio == 0 || path_follow.progress_ratio == 1:
 		_waiting = true
+		if !Engine.is_editor_hint():
+			SoundEffectManager.play_effect_at(_get_click_sound_effect(), global_position)
 		get_tree().create_timer(WAIT_TIME).timeout.connect(
 			func() -> void: _waiting = false ; _moving_right = !_moving_right
 		)
+
+
+func _get_click_sound_effect() -> SoundEffectConfig:
+	return load("res://audio/shared_sound_effects/moving_platform_position_lock.tres")
