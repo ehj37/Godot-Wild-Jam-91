@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://boheaxqulwy33"
+path="res://.godot/imported/lizard_statue_fragments.aseprite-c13e32880dad79da5cf94cdeb68b9349.res"
+
+[deps]
+
+source_file="res://scenes/blob/lizard_statue_fragments/lizard_statue_fragments.aseprite"
+dest_files=["res://.godot/imported/lizard_statue_fragments.aseprite-c13e32880dad79da5cf94cdeb68b9349.res"]
+
+[params]
+
