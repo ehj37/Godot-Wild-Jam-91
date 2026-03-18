@@ -15,8 +15,13 @@ func update(_delta: float) -> void:
 
 func enter(_data: Dictionary = {}) -> void:
 	hopper.animation_player.play("deblob")
+	SoundEffectManager.play_effect_at(_get_deblob_sound_effect_config(), hopper.global_position)
 	TransferModeManager.disable_transfer_mode()
 
 
 func exit() -> void:
 	TransferModeManager.enable_transfer_mode()
+
+
+func _get_deblob_sound_effect_config() -> SoundEffectConfig:
+	return load("res://audio/shared_sound_effects/player_deblob.tres")

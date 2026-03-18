@@ -63,6 +63,17 @@ func play_effect_at(
 	audio_stream_player.finished.connect(func() -> void: _remove_effect(sound_effect_details))
 
 
+# Doesn't have the fun auto-cancellation logic that the positional version of
+# this has, but I don't need it right now.
+func play_effect(sound_effect_config: SoundEffectConfig) -> void:
+	var audio_stream_player: AudioStreamPlayer = AudioStreamPlayer.new()
+	audio_stream_player.stream = sound_effect_config.audio_stream
+	add_child(audio_stream_player)
+
+	audio_stream_player.play()
+	audio_stream_player.finished.connect(func() -> void: audio_stream_player.queue_free())
+
+
 func _remove_effect(sound_effect_details: SoundEffectDetails) -> void:
 	@warning_ignore("unsafe_cast")
 	(_sound_effect_details_by_screen_coords.get(sound_effect_details.screen_coords) as Array).erase(

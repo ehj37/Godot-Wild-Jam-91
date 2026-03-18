@@ -34,11 +34,21 @@ func _process(_delta: float) -> void:
 
 func _exit_transfer_mode() -> void:
 	animation_player.play("show", -1, -1.0, true)
+	SoundEffectManager.play_effect(_get_transfer_mode_exit_sound_effect_config())
 	_in_transfer_mode = false
 	transfer_mode_exited.emit()
 
 
 func _enter_transfer_mode() -> void:
 	animation_player.play("show", -1, 1.0)
+	SoundEffectManager.play_effect(_get_transfer_mode_enter_sound_effect_config())
 	_in_transfer_mode = true
 	transfer_mode_entered.emit()
+
+
+func _get_transfer_mode_enter_sound_effect_config() -> SoundEffectConfig:
+	return load("res://scenes/transfer_mode_manager/sound_effects/transfer_mode_enter.tres")
+
+
+func _get_transfer_mode_exit_sound_effect_config() -> SoundEffectConfig:
+	return load("res://scenes/transfer_mode_manager/sound_effects/transfer_mode_exit.tres")

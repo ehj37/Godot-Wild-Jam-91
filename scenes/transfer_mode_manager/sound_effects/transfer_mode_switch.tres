@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://bjkxc1057mc5w"]
+
+[ext_resource type="AudioStream" uid="uid://djswe54gs2spy" path="res://scenes/transfer_mode_manager/sound_effects/transfer_mode_switch.ogg" id="1_n8jwg"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="2_05b1d"]
+
+[resource]
+script = ExtResource("2_05b1d")
+type = "transfer_mode_switch"
+audio_stream = ExtResource("1_n8jwg")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

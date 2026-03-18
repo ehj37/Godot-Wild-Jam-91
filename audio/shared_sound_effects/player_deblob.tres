@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://cmtqx8x55hwxy"]
+
+[ext_resource type="AudioStream" uid="uid://cmn4imp66aqhw" path="res://audio/shared_sound_effects/player_deblob.ogg" id="1_5c571"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="2_enysy"]
+
+[resource]
+script = ExtResource("2_enysy")
+type = "player_deblob"
+audio_stream = ExtResource("1_5c571")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

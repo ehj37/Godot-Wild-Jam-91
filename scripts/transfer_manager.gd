@@ -58,6 +58,7 @@ func _process(_delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("cycle_focused_transfer_area"):
+		SoundEffectManager.play_effect(_get_transfer_mode_switch_sound_effect_config())
 		player_transfer_area.cycle_focused_area()
 
 	if Input.is_action_just_pressed("transfer"):
@@ -73,3 +74,7 @@ func _process(_delta: float) -> void:
 func _ready() -> void:
 	TransferModeManager.transfer_mode_entered.connect(func() -> void: _in_transfer_mode = true)
 	TransferModeManager.transfer_mode_exited.connect(func() -> void: _in_transfer_mode = false)
+
+
+func _get_transfer_mode_switch_sound_effect_config() -> SoundEffectConfig:
+	return load("res://scenes/transfer_mode_manager/sound_effects/transfer_mode_switch.tres")
