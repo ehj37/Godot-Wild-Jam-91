@@ -1,0 +1,195 @@
+[gd_scene format=4 uid="uid://bbyuyq4363tqy"]
+
+[ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="1_ijptp"]
+[ext_resource type="Script" uid="uid://frhjyjnjolbx" path="res://scenes/effigy/effigy.gd" id="1_q8f6d"]
+[ext_resource type="Script" uid="uid://dr35the6fp2i7" path="res://scenes/effigy/state/idle.gd" id="3_fw7an"]
+[ext_resource type="Script" uid="uid://dfkg3wfggq6m" path="res://scripts/state_machine.gd" id="3_psnnp"]
+[ext_resource type="Script" uid="uid://dxby2ca1btlhf" path="res://scenes/effigy/state/blob.gd" id="4_x4v2u"]
+[ext_resource type="Script" uid="uid://c2gur3khofkce" path="res://scenes/effigy/state/deblob.gd" id="5_e36fg"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_fw7an"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAEAAAADEAAAAUklGRrwAAABXRUJQVlA4TK8AAAAvP8APEEegoG0bNtT9z2MK2jZyY7f33eN4BW3bsKHufx6b/wDA/3/vpKau5uayUmgQFXAbSbKrIC+CK/wvI/gRvDqw8b6L3HomIbzcv7pFgxXR/wmY/ZsnYUWQEiCUFAEII6JLSOgVv3jq1HBLGBSv2dDM/dAnfvu+lV+rndAwTsCGEwAlXXYsDYzbts+Wb0zOsixnKc0ymlJaG2i+Wxmn1Dw3imkeKGWpuVHMNEwCAA==")
+size_override = Vector2(64, 64)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_x4v2u"]
+_data = PackedByteArray("AAADAAUAAAABAAAAAAEAAMAAAADyAAAAUklGRuoAAABXRUJQVlA4TN0AAAAv/8AvEB8w/0KChP+Lbc7//AfgG4Bd2wqjimv4y2H6sASu4X8S/WgRtiwPWC+niP6jbds2TNKx0B3yZ+coXjlltbbc+OoffXcpyhGfPZ2ri9K5y17QEdUkdISfeEeQmRm8EE87l9+NcxRZyEdr8JyKIJt6oG8PBJEeMpnGoZpCXztWu5FRVyLacY9+ZERyx8Y1EskdB/E6WqZ3uJTpHVqO7777a39uLH/eH115h0l1R1PeMc/uaNO15hkN8r/Q6OuHV4/18Np15czvQLK28Yw2TzY+4LBHMjVr/I4kAgA=")
+size_override = Vector2(256, 192)
+
+[sub_resource type="Animation" id="Animation_ijptp"]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_vkjkk"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_q8f6d"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_psnnp"]
+_data = {
+&"blob": SubResource("Animation_ijptp"),
+&"deblob": SubResource("Animation_vkjkk"),
+&"idle": SubResource("Animation_q8f6d")
+}
+
+[node name="Effigy" type="Node2D" unique_id=1983177460]
+script = ExtResource("1_q8f6d")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1585897335]
+script = ExtResource("3_psnnp")
+initial_state_name = "Idle"
+metadata/_custom_type_script = "uid://dfkg3wfggq6m"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1910792575]
+script = ExtResource("3_fw7an")
+metadata/_custom_type_script = "uid://dd0epq5d60hx"
+
+[node name="Blob" type="Node" parent="StateMachine" unique_id=1746251709]
+script = ExtResource("4_x4v2u")
+metadata/_custom_type_script = "uid://dd0epq5d60hx"
+
+[node name="Deblob" type="Node" parent="StateMachine" unique_id=1383899520]
+script = ExtResource("5_e36fg")
+metadata/_custom_type_script = "uid://dd0epq5d60hx"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1141690885]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_fw7an")
+offset = Vector2(0, -32)
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": ["Layer 1"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/effigy/effigy.aseprite",
+"source_uid": 3074732538402680608
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f883bc29945b7813ae4baa17b519cfdc"
+
+[node name="SpriteBlob" type="Sprite2D" parent="." unique_id=60321794]
+visible = false
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_x4v2u")
+offset = Vector2(0, -32)
+hframes = 4
+vframes = 3
+frame = 6
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": ["Blob"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/effigy/effigy.aseprite",
+"source_uid": 3074732538402680608
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f883bc29945b7813ae4baa17b519cfdc"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1898229722]
+libraries/ = SubResource("AnimationLibrary_psnnp")
+
+[node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("1_ijptp")]
+position = Vector2(0, -20)
+radius = 100
+
+[connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]
+[connection signal="transfer_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_requested"]

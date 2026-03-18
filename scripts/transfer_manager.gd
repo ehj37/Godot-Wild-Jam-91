@@ -65,10 +65,11 @@ func _process(_delta: float) -> void:
 		var focused_area: TransferArea = player_transfer_area.focused_area
 		_on_transfer_areas_changed()
 		if focused_area != null:
-			player_transfer_area.on_transfer_away()
-			focused_area.on_transfer()
 			# Trusting that the entities that disable transfer mode will re-enable it
 			TransferModeManager.disable_transfer_mode()
+
+			player_transfer_area.on_transfer_away()
+			focused_area.on_transfer()
 
 
 func _ready() -> void:
