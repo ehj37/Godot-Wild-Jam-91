@@ -187,7 +187,7 @@ texture = SubResource("PortableCompressedTexture2D_gcaq2")
 offset = Vector2(0, -16)
 hframes = 4
 vframes = 4
-frame = 1
+frame = 9
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}
@@ -219,7 +219,7 @@ texture = SubResource("PortableCompressedTexture2D_tnb47")
 offset = Vector2(0, -16)
 hframes = 4
 vframes = 4
-frame = 1
+frame = 8
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}

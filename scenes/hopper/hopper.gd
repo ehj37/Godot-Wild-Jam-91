@@ -22,6 +22,7 @@ func spawn_blob() -> void:
 	var blob: Blob = blob_packed_scene.instantiate()
 	blob.global_position = global_position + Vector2(0, -12)
 	blob.initial_state_name = "Airborne"
+	blob.initial_state_data = {"animation": "jump_up"}
 	LevelManager.add_child(blob)
 	blob.apply_central_impulse(Vector2.UP * BLOB_EJECTION_IMPULSE_MAGNITUDE)
 

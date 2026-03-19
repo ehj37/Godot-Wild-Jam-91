@@ -5,6 +5,7 @@ extends Node
 signal state_transitioned(state_name: String)
 
 @export var initial_state_name: String
+@export var initial_state_data: Dictionary
 
 var current_state: State
 var _states: Array[State] = []
@@ -53,4 +54,4 @@ func _ready() -> void:
 	else:
 		current_state = _initial_state
 
-	current_state.enter()
+	current_state.enter(initial_state_data)

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://chv3j7tk8cqun"
+path="res://.godot/imported/caldera.aseprite-1ffc6f5ad9568acec4b46bfce62b1e10.res"
+
+[deps]
+
+source_file="res://scenes/caldera/caldera.aseprite"
+dest_files=["res://.godot/imported/caldera.aseprite-1ffc6f5ad9568acec4b46bfce62b1e10.res"]
+
+[params]
+

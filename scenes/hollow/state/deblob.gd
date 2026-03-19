@@ -8,7 +8,8 @@ const DEBLOB_IMPULSE_MAGNITUDE: float = 800.0
 func update(_delta: float) -> void:
 	if !hollow.animation_player.is_playing():
 		var blob: Blob = blob_packed_scene.instantiate()
-		blob.initial_state_name = "Idle"
+		blob.initial_state_name = "Airborne"
+		blob.initial_state_data = {"animation": "jump_right"}
 		LevelManager.current_level.add_child(blob)
 		blob.global_position = hollow.deblob_cavity.global_position
 

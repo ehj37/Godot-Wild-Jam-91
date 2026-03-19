@@ -3,6 +3,7 @@ class_name Blob
 extends RigidBody2D
 
 var initial_state_name: String
+var initial_state_data: Dictionary
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_statue: Sprite2D = $SpriteStatue
@@ -16,8 +17,10 @@ var initial_state_name: String
 
 func _ready() -> void:
 	TransferManager.transfer(self, _transfer_area)
+
 	if initial_state_name != "":
 		_state_machine.initial_state_name = initial_state_name
+		_state_machine.initial_state_data = initial_state_data
 
 
 func is_grounded() -> bool:

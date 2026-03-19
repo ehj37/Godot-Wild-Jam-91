@@ -1,0 +1,356 @@
+[gd_scene format=4 uid="uid://blr3x4nehj0ht"]
+
+[ext_resource type="Script" uid="uid://csim14rqs8exy" path="res://scenes/caldera/caldera.gd" id="1_ay34e"]
+[ext_resource type="Script" uid="uid://dfkg3wfggq6m" path="res://scripts/state_machine.gd" id="2_213tn"]
+[ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="3_213tn"]
+[ext_resource type="Script" uid="uid://ba0h8dsfelfv7" path="res://scenes/caldera/state/idle.gd" id="3_juvl5"]
+[ext_resource type="Script" uid="uid://bf44l1u8ojtj0" path="res://scenes/caldera/state/blob.gd" id="4_hcvht"]
+[ext_resource type="Script" uid="uid://b3tyimraxogd1" path="res://scenes/caldera/state/deblob.gd" id="5_86u5i"]
+[ext_resource type="Script" uid="uid://cd04w3y5c8i3f" path="res://scenes/caldera/state/step.gd" id="6_v53xl"]
+[ext_resource type="Script" uid="uid://d4bu5cyhamk1v" path="res://scenes/caldera/state/fall.gd" id="7_7sah8"]
+[ext_resource type="Script" uid="uid://bgnylamtki1fk" path="res://scenes/caldera/state/land.gd" id="8_bjaho"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_juvl5"]
+_data = PackedByteArray("AAADAAUAAAABAAAAwAAAAIAAAAB4AAAAUklGRnAAAABXRUJQVlA4TGQAAAAvv8AfEC+gpm0DJvzxdZxlUSyK2jZiuvjDu+8kQiRAwgCi/8fZdcP8B4B+/bfWU62AokiSmrOABSxgYXHA+TeTn+SI/k8AvdWzmNHEDIg3g+//CVrFjCJmsLh0dGDMLXHmHfkB")
+size_override = Vector2(192, 128)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_hcvht"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAEAAAAAuAAAAUklGRiYAAABXRUJQVlA4TBkAAAAvP8APEA8QEfMfgmgYYj73fyFG9D8tbhwBAA==")
+size_override = Vector2(64, 64)
+
+[sub_resource type="Animation" id="Animation_5b2ij"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_twc0q"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_86u5i"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qqyd1"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_v53xl"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hcvht"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBlob:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n2atq"]
+_data = {
+&"blob": SubResource("Animation_5b2ij"),
+&"deblob": SubResource("Animation_twc0q"),
+&"fall": SubResource("Animation_86u5i"),
+&"idle": SubResource("Animation_qqyd1"),
+&"land": SubResource("Animation_v53xl"),
+&"step": SubResource("Animation_hcvht")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juvl5"]
+size = Vector2(14, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcvht"]
+size = Vector2(4, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86u5i"]
+size = Vector2(2, 20)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_juvl5"]
+
+[node name="Caldera" type="RigidBody2D" unique_id=391821627]
+collision_layer = 0
+collision_mask = 3
+can_sleep = false
+lock_rotation = true
+script = ExtResource("1_ay34e")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1761436848]
+script = ExtResource("2_213tn")
+initial_state_name = "Idle"
+metadata/_custom_type_script = "uid://dfkg3wfggq6m"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=2116214365]
+script = ExtResource("3_juvl5")
+metadata/_custom_type_script = "uid://bk5utgr3jxwht"
+
+[node name="Blob" type="Node" parent="StateMachine" unique_id=920301509]
+script = ExtResource("4_hcvht")
+metadata/_custom_type_script = "uid://bk5utgr3jxwht"
+
+[node name="Deblob" type="Node" parent="StateMachine" unique_id=321945483]
+script = ExtResource("5_86u5i")
+metadata/_custom_type_script = "uid://bk5utgr3jxwht"
+
+[node name="Step" type="Node" parent="StateMachine" unique_id=1314031972]
+script = ExtResource("6_v53xl")
+metadata/_custom_type_script = "uid://bk5utgr3jxwht"
+
+[node name="Fall" type="Node" parent="StateMachine" unique_id=895481131]
+script = ExtResource("7_7sah8")
+metadata/_custom_type_script = "uid://bk5utgr3jxwht"
+
+[node name="Land" type="Node" parent="StateMachine" unique_id=1886351964]
+script = ExtResource("8_bjaho")
+metadata/_custom_type_script = "uid://bk5utgr3jxwht"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=629397278]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_juvl5")
+offset = Vector2(0, -16)
+hframes = 3
+vframes = 2
+frame = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": ["caldera"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/caldera/caldera.aseprite",
+"source_uid": 5309233064227328789
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1bc0bc1c6ff1a106bb5c89aba6f79192"
+
+[node name="SpriteBlob" type="Sprite2D" parent="." unique_id=453529132]
+visible = false
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_hcvht")
+offset = Vector2(0, -16)
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": ["blob"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/caldera/caldera.aseprite",
+"source_uid": 5309233064227328789
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1bc0bc1c6ff1a106bb5c89aba6f79192"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1583121397]
+libraries/ = SubResource("AnimationLibrary_n2atq")
+
+[node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("3_213tn")]
+radius = 75
+
+[node name="GroundDetector" type="Area2D" parent="." unique_id=994196582]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundDetector" unique_id=1633867712]
+shape = SubResource("RectangleShape2D_juvl5")
+
+[node name="LedgeDetectorRight" type="Area2D" parent="." unique_id=376037119]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetectorRight" unique_id=315809726]
+position = Vector2(12, 0)
+shape = SubResource("RectangleShape2D_hcvht")
+
+[node name="LedgeDetectorLeft" type="Area2D" parent="." unique_id=839057415]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetectorLeft" unique_id=155457932]
+position = Vector2(-12, 0)
+shape = SubResource("RectangleShape2D_hcvht")
+
+[node name="ObstacleDetectorRight" type="Area2D" parent="." unique_id=1068523578]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleDetectorRight" unique_id=1822758347]
+position = Vector2(11, -14)
+shape = SubResource("RectangleShape2D_86u5i")
+
+[node name="ObstacleDetectorLeft" type="Area2D" parent="." unique_id=193203765]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleDetectorLeft" unique_id=249005177]
+position = Vector2(-11, -14)
+shape = SubResource("RectangleShape2D_86u5i")
+
+[node name="StepCooldownTimer" type="Timer" parent="." unique_id=1741965811]
+wait_time = 0.2
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845067845]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_juvl5")
+
+[connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]
+[connection signal="transfer_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_requested"]

@@ -8,12 +8,12 @@ particles_anim_h_frames = 9
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[sub_resource type="Curve" id="Curve_8t7go"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Curve_xfk4w"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.20965588), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_1ilya"]
-curve = SubResource("Curve_8t7go")
+[sub_resource type="CurveTexture" id="CurveTexture_n20yt"]
+curve = SubResource("Curve_xfk4w")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6b3j6"]
 particle_flag_disable_z = true
@@ -27,7 +27,7 @@ initial_velocity_max = -100.0
 angular_velocity_min = -50.000015
 angular_velocity_max = 49.99998
 gravity = Vector3(0, 400, 0)
-alpha_curve = SubResource("CurveTexture_1ilya")
+scale_curve = SubResource("CurveTexture_n20yt")
 anim_offset_max = 1.0
 
 [node name="LizardStatueFragments" type="GPUParticles2D" unique_id=605108622]

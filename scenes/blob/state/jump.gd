@@ -19,7 +19,6 @@ func enter(_data: Dictionary = {}) -> void:
 			impulse_direction = Vector2.UP
 
 	blob.apply_central_impulse(impulse_direction * JUMP_IMPULSE_MAGNITUDE)
-	blob.animation_player.play("jump_right")
 	SoundEffectManager.play_effect_at(sound_effect_config_jump, blob.global_position)
-	state_machine.transition_to("Airborne")
+	state_machine.transition_to("Airborne", {"animation": "jump_right"})
 	blob.jump_cooldown_timer.start()

@@ -154,6 +154,7 @@ script = ExtResource("1_d560c")
 
 [node name="StateMachine" type="Node" parent="." unique_id=60001008]
 script = ExtResource("2_ucc2e")
+initial_state_name = "Idle"
 metadata/_custom_type_script = "uid://dfkg3wfggq6m"
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1910413826]

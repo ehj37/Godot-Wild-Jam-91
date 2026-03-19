@@ -19,20 +19,14 @@ func handle_input(event: InputEvent) -> void:
 		_hp -= 1
 		blob.sprite_statue.region_rect.position.x += 32
 		SoundEffectManager.play_effect_at(_get_damage_sound_effect(), blob.global_position)
-
-		var damage_particles: GPUParticles2D = _get_damage_particles()
-		damage_particles.global_position = blob.global_position + Vector2(0, -10)
-		damage_particles.emitting = true
-		LevelManager.current_level.add_child(damage_particles)
-		damage_particles.finished.connect(damage_particles.queue_free)
+		_spawn_damage_particles()
 
 		_damage_cooldown = true
 		get_tree().create_timer(DAMAGE_COOLDOWN_DURATION).timeout.connect(
 			func() -> void: _damage_cooldown = false
 		)
 	else:
-		state_machine.transition_to("Airborne")
-		blob.animation_player.play("jump_up")
+		state_machine.transition_to("Airborne", {"animation": "jump_up"})
 
 
 func enter(_data: Dictionary = {}) -> void:
@@ -52,6 +46,8 @@ func exit() -> void:
 	LevelManager.current_level.add_child(lizard_statue_fragments)
 	lizard_statue_fragments.finished.connect(lizard_statue_fragments.queue_free)
 
+	_spawn_damage_particles()
+
 	blob.sprite_statue.visible = false
 	blob.sprite.visible = true
 	blob.animation_player.play("jump_up")
@@ -62,6 +58,14 @@ func exit() -> void:
 func _get_damage_particles() -> GPUParticles2D:
 	var packed_scene: PackedScene = load("res://scenes/blob/lizard_statue_damage_particles.tscn")
 	return packed_scene.instantiate()
+
+
+func _spawn_damage_particles() -> void:
+	var damage_particles: GPUParticles2D = _get_damage_particles()
+	damage_particles.global_position = blob.global_position + Vector2(0, -10)
+	damage_particles.emitting = true
+	LevelManager.current_level.add_child(damage_particles)
+	damage_particles.finished.connect(damage_particles.queue_free)
 
 
 func _get_lizard_statue_fragments() -> GPUParticles2D:

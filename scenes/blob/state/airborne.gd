@@ -29,6 +29,9 @@ func update(delta: float) -> void:
 		_fall_animation_played = true
 
 
-func enter(_data: Dictionary = {}) -> void:
+func enter(data: Dictionary = {}) -> void:
+	var animation: String = data.get("animation", "jump_right")
+	blob.animation_player.play(animation)
+
 	_fall_animation_played = false
 	_airborne_time = 0.0
