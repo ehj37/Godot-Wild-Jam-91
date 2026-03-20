@@ -1,7 +1,11 @@
 [gd_resource type="Theme" format=3 uid="uid://bg52xtwgkwdrc"]
 
+[ext_resource type="FontFile" uid="uid://cjw8beoudqamv" path="res://fonts/arne.png" id="1_o2r72"]
+
 [resource]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-Button/font_sizes/font_size = 8
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_o2r72")
 Label/colors/font_color = Color(1, 0, 1, 1)
 Label/font_sizes/font_size = 6
+Label/fonts/font = ExtResource("1_o2r72")

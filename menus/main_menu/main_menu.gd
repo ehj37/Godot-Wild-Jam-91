@@ -15,6 +15,9 @@ var _music_volume_slider: HSlider = $CenterContainer/SettingsMenu/MusicVolumeCon
 
 
 func _ready() -> void:
+	#_main_menu_buttons.visible = true
+	#_settings_menu.visible = false
+
 	var master_bus_index: int = AudioServer.get_bus_index("Master")
 	_main_volume_slider.value = db_to_linear(AudioServer.get_bus_volume_db(master_bus_index))
 
