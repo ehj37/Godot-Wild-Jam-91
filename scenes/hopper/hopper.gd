@@ -4,7 +4,10 @@ extends RigidBody2D
 
 const BLOB_EJECTION_IMPULSE_MAGNITUDE: float = 500.0
 
-var player_controlled: bool = false
+var player_controlled: bool = false:
+	set(new_value):
+		player_controlled = new_value
+		set_collision_layer_value(7, player_controlled)
 
 @onready var blob_packed_scene: PackedScene = preload("res://scenes/blob/blob.tscn")
 @onready var animation_player: AnimationPlayer = $AnimationPlayer

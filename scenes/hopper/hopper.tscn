@@ -207,7 +207,7 @@ bg_color = Color(0.7254902, 0.011764706, 0.26666668, 1)
 
 [node name="Hopper" type="RigidBody2D" unique_id=1862934551]
 z_index = -1
-collision_layer = 0
+collision_layer = 128
 collision_mask = 3
 can_sleep = false
 lock_rotation = true

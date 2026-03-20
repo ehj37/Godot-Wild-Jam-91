@@ -2,7 +2,10 @@ class_name Hollow
 
 extends RigidBody2D
 
-var player_controlled: bool = false
+var player_controlled: bool = false:
+	set(new_value):
+		player_controlled = new_value
+		set_collision_layer_value(7, player_controlled)
 
 @onready var state_machine: StateMachine = $StateMachine
 @onready var sprite: Sprite2D = $SpriteHollow

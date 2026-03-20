@@ -104,8 +104,13 @@ _data = {
 &"idle": SubResource("Animation_q8f6d")
 }
 
-[node name="Effigy" type="Node2D" unique_id=1983177460]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fw7an"]
+height = 40.0
+
+[node name="Effigy" type="StaticBody2D" unique_id=763253102]
 z_index = -1
+collision_layer = 128
+collision_mask = 0
 script = ExtResource("1_q8f6d")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1585897335]
@@ -191,6 +196,10 @@ libraries/ = SubResource("AnimationLibrary_psnnp")
 [node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("1_ijptp")]
 position = Vector2(0, -20)
 radius = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1341773034]
+position = Vector2(0, -20)
+shape = SubResource("CapsuleShape2D_fw7an")
 
 [connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]
 [connection signal="transfer_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_requested"]

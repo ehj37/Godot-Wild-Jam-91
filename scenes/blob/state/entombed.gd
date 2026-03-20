@@ -40,6 +40,8 @@ func exit() -> void:
 	# Give the appearance that the blob is spawning from the center of the statue
 	blob.position.y -= 16.0
 
+	blob.statue_broken.emit()
+
 	var lizard_statue_fragments: GPUParticles2D = _get_lizard_statue_fragments()
 	lizard_statue_fragments.global_position = blob.global_position
 	lizard_statue_fragments.emitting = true

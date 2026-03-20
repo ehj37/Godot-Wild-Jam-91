@@ -9,6 +9,7 @@ var _in_transfer_mode: bool = false
 var _transfer_mode_disabled: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var instructions_panel: Panel = $InstructionsPanel
 
 
 func enable_transfer_mode() -> void:
@@ -34,6 +35,7 @@ func _process(_delta: float) -> void:
 
 func _exit_transfer_mode() -> void:
 	animation_player.play("show", -1, -1.0, true)
+	instructions_panel.visible = false
 	SoundEffectManager.play_effect(_get_transfer_mode_exit_sound_effect_config())
 	_in_transfer_mode = false
 	transfer_mode_exited.emit()
@@ -41,6 +43,7 @@ func _exit_transfer_mode() -> void:
 
 func _enter_transfer_mode() -> void:
 	animation_player.play("show", -1, 1.0)
+	instructions_panel.visible = true
 	SoundEffectManager.play_effect(_get_transfer_mode_enter_sound_effect_config())
 	_in_transfer_mode = true
 	transfer_mode_entered.emit()

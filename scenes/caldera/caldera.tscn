@@ -178,7 +178,7 @@ height = 18.0
 
 [node name="Caldera" type="RigidBody2D" unique_id=391821627]
 z_index = -1
-collision_layer = 0
+collision_layer = 128
 collision_mask = 3
 can_sleep = false
 lock_rotation = true

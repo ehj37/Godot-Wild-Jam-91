@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyox84xidk4qh"]
+
+[ext_resource type="Script" uid="uid://c5sx77ehq0d55" path="res://scenes/fade_in_label/fade_in_label.gd" id="1_8uwpq"]
+[ext_resource type="FontFile" uid="uid://cjw8beoudqamv" path="res://fonts/arne.png" id="1_gddcb"]
+
+[node name="FadeInLabel" type="Label" unique_id=111311089]
+z_index = 5
+theme_override_fonts/font = ExtResource("1_gddcb")
+theme_override_font_sizes/font_size = 6
+script = ExtResource("1_8uwpq")

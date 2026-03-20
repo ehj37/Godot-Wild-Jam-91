@@ -2,6 +2,9 @@ class_name Blob
 
 extends RigidBody2D
 
+@warning_ignore("unused_signal")
+signal statue_broken
+
 var initial_state_name: String
 var initial_state_data: Dictionary
 
