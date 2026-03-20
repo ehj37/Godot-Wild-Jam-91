@@ -239,7 +239,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/blob/blob.aseprite",
 "source_uid": 6447877206398014428
 }
-metadata/_aseprite_wizard_source_file_hash_ = "95137a4b24f40a192734370a7a4ec497"
+metadata/_aseprite_wizard_source_file_hash_ = "5b2b21b8ba219e2fed6474dab7914473"
 
 [node name="SpriteStatue" type="Sprite2D" parent="." unique_id=315027220]
 visible = false

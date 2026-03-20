@@ -105,6 +105,7 @@ _data = {
 }
 
 [node name="Effigy" type="Node2D" unique_id=1983177460]
+z_index = -1
 script = ExtResource("1_q8f6d")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1585897335]

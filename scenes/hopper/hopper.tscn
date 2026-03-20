@@ -206,6 +206,7 @@ bg_color = Color(0, 0, 0, 0.42745098)
 bg_color = Color(0.7254902, 0.011764706, 0.26666668, 1)
 
 [node name="Hopper" type="RigidBody2D" unique_id=1862934551]
+z_index = -1
 collision_layer = 0
 collision_mask = 3
 can_sleep = false
@@ -273,7 +274,6 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "fb2ed7ea055f8e2708dc81d02eac7379"
 
 [node name="SpriteBlob" type="Sprite2D" parent="." unique_id=2052524992]
-visible = false
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_rqqt7")
 offset = Vector2(0, -16)

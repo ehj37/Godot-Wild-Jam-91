@@ -38,4 +38,4 @@ func _on_transfer_area_transfer_requested() -> void:
 
 func _on_transfer_area_transfer_away_requested() -> void:
 	player_controlled = false
-	sprite_blob.visible = true
+	sprite_blob.visible = false

@@ -25,9 +25,9 @@ script = ExtResource("1_8o2wm")
 curve = SubResource("Curve2D_x8gua")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=550714923]
-position = Vector2(0, -200)
+position = Vector2(0, -167.01775)
 rotation = -1.5707964
-progress = 200.0
+progress = 167.0
 rotates = false
 loop = false
 

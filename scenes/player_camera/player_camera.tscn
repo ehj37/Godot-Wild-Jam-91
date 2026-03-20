@@ -2,5 +2,93 @@
 
 [ext_resource type="Script" uid="uid://qfjb13bp55ju" path="res://scenes/player_camera/player_camera.gd" id="1_rxdyy"]
 
+[sub_resource type="Curve" id="Curve_rxdyy"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.41884816, 0.14227647), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_10cv3"]
+curve = SubResource("Curve_rxdyy")
+
+[sub_resource type="Curve" id="Curve_10cv3"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.39267015, 0.86585367), 0.0, 0.0, 0, 0, Vector2(0.8350785, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_54k7s"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.37696332, 0.4186992), 0.0, 0.0, 0, 0, Vector2(0.8821989, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_1y2ra"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_wegl2"]
+curve_x = SubResource("Curve_10cv3")
+curve_y = SubResource("Curve_54k7s")
+curve_z = SubResource("Curve_1y2ra")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rxdyy"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(320, 180, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 10.0
+initial_velocity_max = 25.0
+directional_velocity_min = 1.0
+directional_velocity_max = 1.0
+directional_velocity_curve = SubResource("CurveXYZTexture_wegl2")
+gravity = Vector3(0, 0, 0)
+color = Color(0, 0, 0, 1)
+alpha_curve = SubResource("CurveTexture_10cv3")
+
+[sub_resource type="Curve" id="Curve_wegl2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2853403, 0.24390244), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_41wfr"]
+curve = SubResource("Curve_wegl2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_10cv3"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(320, 180, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 2.0
+color = Color(0.8901961, 0.83137256, 0.92941177, 1)
+alpha_curve = SubResource("CurveTexture_41wfr")
+
+[sub_resource type="Curve" id="Curve_41wfr"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_x46uu"]
+curve = SubResource("Curve_41wfr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_54k7s"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(320, 180, 1)
+direction = Vector3(1, 1, 0)
+initial_velocity_min = 45.0
+initial_velocity_max = 45.0
+gravity = Vector3(0, 0, 0)
+color = Color(0.8901961, 0.83137256, 0.92941177, 1)
+alpha_curve = SubResource("CurveTexture_x46uu")
+
 [node name="PlayerCamera" type="Camera2D" unique_id=1204636696]
 script = ExtResource("1_rxdyy")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1048610497]
+amount = 100
+lifetime = 2.0
+preprocess = 2.0
+process_material = SubResource("ParticleProcessMaterial_rxdyy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=2140165729]
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_10cv3")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=790950189]
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_54k7s")
