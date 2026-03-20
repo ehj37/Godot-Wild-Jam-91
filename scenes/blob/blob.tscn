@@ -169,7 +169,7 @@ script = ExtResource("1_8afob")
 
 [node name="StateMachine" type="Node" parent="." unique_id=60196734]
 script = ExtResource("2_peg37")
-initial_state_name = "Entombed"
+initial_state_name = "Idle"
 metadata/_custom_type_script = "uid://dfkg3wfggq6m"
 
 [node name="Entombed" type="Node" parent="StateMachine" unique_id=1444409423]

@@ -17,4 +17,3 @@ func update(delta: float) -> void:
 
 func enter(_data: Dictionary = {}) -> void:
 	_fall_duration = 0.0
-	hopper.animation_player.play("fall")

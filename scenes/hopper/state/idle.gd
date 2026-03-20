@@ -17,6 +17,7 @@ func update(_delta: float) -> void:
 		var move_input: MoveInputController.MoveInput = MoveInputController.get_move_input()
 		if move_input != -1:
 			hopper.sprite.flip_h = move_input == MoveInputController.MoveInput.LEFT
+			hopper.sprite_blob.flip_h = hopper.sprite.flip_h
 
 		if Input.is_action_pressed("jump") && hopper.hop_cooldown_timer.is_stopped():
 			state_machine.transition_to("Hop")

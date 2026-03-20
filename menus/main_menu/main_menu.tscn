@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://bg52xtwgkwdrc" path="res://menus/menu_theme.tres" id="2_1nwmw"]
 
 [node name="MainMenu" type="Control" unique_id=1972768220]
+visible = false
 z_index = 9
 layout_mode = 3
 anchors_preset = 0

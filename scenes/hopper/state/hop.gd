@@ -31,11 +31,10 @@ func update(delta: float) -> void:
 				_handle_jump()
 			return
 
-	if !hopper.animation_player.is_playing():
-		if is_grounded():
-			state_machine.transition_to("Idle")
-		else:
-			state_machine.transition_to("Fall")
+	if is_grounded():
+		state_machine.transition_to("Idle")
+	else:
+		state_machine.transition_to("Fall")
 
 
 func enter(_data: Dictionary = {}) -> void:
@@ -86,6 +85,7 @@ func _handle_jump() -> void:
 		-1:
 			move_direction = Vector2.UP
 
+	hopper.sprite_blob.flip_h = hopper.sprite.flip_h
 	var hop_impulse_mult: float = max(_charge_time / FULL_CHARGE_TIME, BASE_CHARGE_MULT)
 	hopper.apply_central_impulse(move_direction * hop_impulse_mult * MAX_HOP_IMPULSE_MAGNITUDE)
 

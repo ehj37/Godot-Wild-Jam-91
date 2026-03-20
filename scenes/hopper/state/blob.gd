@@ -12,6 +12,7 @@ func update(_delta: float) -> void:
 
 func enter(_data: Dictionary = {}) -> void:
 	hopper.animation_player.play("blob")
+	hopper.sprite_blob.visible = true
 	SoundEffectManager.play_effect_at(_get_blob_sound_effect(), hopper.global_position)
 
 

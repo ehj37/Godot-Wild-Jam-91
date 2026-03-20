@@ -21,6 +21,7 @@ func enter(_data: Dictionary = {}) -> void:
 
 func exit() -> void:
 	TransferModeManager.enable_transfer_mode()
+	hopper.sprite_blob.visible = false
 
 
 func _get_deblob_sound_effect_config() -> SoundEffectConfig:
