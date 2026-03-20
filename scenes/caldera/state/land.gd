@@ -8,3 +8,8 @@ func update(_delta: float) -> void:
 
 func enter(_data: Dictionary = {}) -> void:
 	caldera.animation_player.play("land")
+	SoundEffectManager.play_effect_at(_get_land_sound_effect_config(), caldera.global_position)
+
+
+func _get_land_sound_effect_config() -> SoundEffectConfig:
+	return load("res://scenes/caldera/sound_effects/caldera_land.tres")

@@ -11,15 +11,15 @@
 [ext_resource type="Script" uid="uid://bgnylamtki1fk" path="res://scenes/caldera/state/land.gd" id="8_bjaho"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_juvl5"]
-_data = PackedByteArray("AAADAAUAAAABAAAAwAAAAIAAAAB4AAAAUklGRnAAAABXRUJQVlA4TGQAAAAvv8AfEC+gpm0DJvzxdZxlUSyK2jZiuvjDu+8kQiRAwgCi/8fZdcP8B4B+/bfWU62AokiSmrOABSxgYXHA+TeTn+SI/k8AvdWzmNHEDIg3g+//CVrFjCJmsLh0dGDMLXHmHfkB")
-size_override = Vector2(192, 128)
+_data = PackedByteArray("AAADAAUAAAABAAAAwAAAAMAAAACKAQAAUklGRoIBAABXRUJQVlA4THUBAAAvv8AvECdAmG00g8FM5/wfR6SQbQQ4dQqvwjkdkbbN8ATMv6Z7OZ//APh/HZkmwG4kuW40uGEkdAILrwIgqc0/KIk87ID+fEX035HbNpJk92w3OvML/FitA0bdtfV196Tu2rfbl1J3iXDmWc39cA/3s2suIU3fXX3qY0RRXdndkO+CqDMbUF0RZc9drEW9OgqBPS60Or2eSLutxV1ylws8p90Q3AtvpyuuFhIv35//eWeIA0bdtfV196Tu2rfbl55dd2lw5p/mfrjHlSibXPru6lMfA7tc8m5E/YetuuTdf/mfUa+Ogn2uOr2eeRdb3AXzrnNyGQTXtDvvtgXEPNwXX95tiKuFedeyx9IxYt398v35n3eWOGB86dfdk/rufS5fShFGbrtLcz/cw/3sWZe+W3dVn/oYUZLudTfFuyiJOr+g7+67XGfUq4PCHzfvfkb2rrbeJe0CW9w1S4fntBuEeJcj7TbjzBdciKuFzLvmu5D4ICgAAA==")
+size_override = Vector2(192, 192)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_hcvht"]
-_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAEAAAAAuAAAAUklGRiYAAABXRUJQVlA4TBkAAAAvP8APEA8QEfMfgmgYYj73fyFG9D8tbhwBAA==")
-size_override = Vector2(64, 64)
+_data = PackedByteArray("AAADAAUAAAABAAAAAAEAAMAAAACiAAAAUklGRpoAAABXRUJQVlA4TI0AAAAv/8AvEBcw/nM///MfgAfWkey0eQLsCqR+KMGx/3KUjL9SRP8RtG2b5ADSnQW+4lzE0BFu0zsG20ULWO3wy/4u966/K1s2XUZnOUdjETdT9EcvoqJ2dDI8du9wdtCCFnsXuDMJ+XrvQgsYv2p2SmdKZ85mme6ORbI7gObusHReS1q0IbTohzV05st4hAkA")
+size_override = Vector2(256, 192)
 
 [sub_resource type="Animation" id="Animation_5b2ij"]
-length = 0.1
+length = 0.45
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,10 +27,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [2]
+"values": [0, 2, 2]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -39,14 +39,14 @@ tracks/1/path = NodePath("SpriteBlob:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [5, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_twc0q"]
-length = 0.1
+length = 0.35
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -54,10 +54,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [3]
+"values": [2, 3, 7]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -66,42 +66,14 @@ tracks/1/path = NodePath("SpriteBlob:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_86u5i"]
-length = 0.1
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteBlob:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"values": [8, 9, 10]
 }
 
 [sub_resource type="Animation" id="Animation_qqyd1"]
-length = 0.1
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -110,10 +82,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -122,14 +94,14 @@ tracks/1/path = NodePath("SpriteBlob:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_v53xl"]
-length = 0.1
+length = 0.55
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -137,10 +109,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5]
+"values": [1, 8]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -149,14 +121,14 @@ tracks/1/path = NodePath("SpriteBlob:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0]
+"values": [1, 11]
 }
 
 [sub_resource type="Animation" id="Animation_hcvht"]
-length = 0.1
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -164,10 +136,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [1]
+"values": [4, 5, 6]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -176,17 +148,16 @@ tracks/1/path = NodePath("SpriteBlob:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [4, 4, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n2atq"]
 _data = {
 &"blob": SubResource("Animation_5b2ij"),
 &"deblob": SubResource("Animation_twc0q"),
-&"fall": SubResource("Animation_86u5i"),
 &"idle": SubResource("Animation_qqyd1"),
 &"land": SubResource("Animation_v53xl"),
 &"step": SubResource("Animation_hcvht")
@@ -199,9 +170,11 @@ size = Vector2(14, 1)
 size = Vector2(4, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86u5i"]
-size = Vector2(2, 20)
+size = Vector2(2, 5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_juvl5"]
+radius = 4.0
+height = 18.0
 
 [node name="Caldera" type="RigidBody2D" unique_id=391821627]
 collision_layer = 0
@@ -244,8 +217,8 @@ texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_juvl5")
 offset = Vector2(0, -16)
 hframes = 3
-vframes = 2
-frame = 2
+vframes = 3
+frame = 7
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}
@@ -268,13 +241,15 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/caldera/caldera.aseprite",
 "source_uid": 5309233064227328789
 }
-metadata/_aseprite_wizard_source_file_hash_ = "1bc0bc1c6ff1a106bb5c89aba6f79192"
+metadata/_aseprite_wizard_source_file_hash_ = "1a75ea197bb647d91067d379cd769d1d"
 
 [node name="SpriteBlob" type="Sprite2D" parent="." unique_id=453529132]
 visible = false
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_hcvht")
 offset = Vector2(0, -16)
+hframes = 4
+vframes = 3
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}
@@ -297,12 +272,13 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/caldera/caldera.aseprite",
 "source_uid": 5309233064227328789
 }
-metadata/_aseprite_wizard_source_file_hash_ = "1bc0bc1c6ff1a106bb5c89aba6f79192"
+metadata/_aseprite_wizard_source_file_hash_ = "1a75ea197bb647d91067d379cd769d1d"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1583121397]
 libraries/ = SubResource("AnimationLibrary_n2atq")
 
 [node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("3_213tn")]
+position = Vector2(0, -7)
 radius = 75
 
 [node name="GroundDetector" type="Area2D" parent="." unique_id=994196582]
@@ -333,7 +309,7 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleDetectorRight" unique_id=1822758347]
-position = Vector2(11, -14)
+position = Vector2(11, -4)
 shape = SubResource("RectangleShape2D_86u5i")
 
 [node name="ObstacleDetectorLeft" type="Area2D" parent="." unique_id=193203765]
@@ -341,7 +317,7 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleDetectorLeft" unique_id=249005177]
-position = Vector2(-11, -14)
+position = Vector2(-11, -4)
 shape = SubResource("RectangleShape2D_86u5i")
 
 [node name="StepCooldownTimer" type="Timer" parent="." unique_id=1741965811]
@@ -349,7 +325,8 @@ wait_time = 0.2
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845067845]
-position = Vector2(0, -15)
+position = Vector2(0, -4)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_juvl5")
 
 [connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]

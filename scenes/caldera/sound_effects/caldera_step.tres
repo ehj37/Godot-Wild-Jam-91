@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://b5pqb1bp2qr8w"]
+
+[ext_resource type="AudioStream" uid="uid://f5l6fbdvejt" path="res://scenes/caldera/sound_effects/caldera_step.ogg" id="1_eynxb"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_k8vyk"]
+
+[resource]
+script = ExtResource("1_k8vyk")
+type = "caldera_step"
+audio_stream = ExtResource("1_eynxb")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

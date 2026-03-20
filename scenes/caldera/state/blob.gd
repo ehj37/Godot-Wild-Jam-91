@@ -8,6 +8,7 @@ func update(_delta: float) -> void:
 
 func enter(_data: Dictionary = {}) -> void:
 	caldera.animation_player.play("blob")
+	caldera.sprite_blob.visible = true
 	SoundEffectManager.play_effect_at(_get_blob_sound_effect(), caldera.global_position)
 
 

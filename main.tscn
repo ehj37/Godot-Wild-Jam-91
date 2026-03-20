@@ -17,7 +17,7 @@
 script = ExtResource("1_lquwl")
 
 [node name="Blob" parent="." unique_id=1924219276 instance=ExtResource("1_ig7tw")]
-position = Vector2(104, -17)
+position = Vector2(688, 780)
 
 [node name="Ground" parent="." unique_id=2125642704 instance=ExtResource("2_0xm2m")]
 texture_filter = 1
@@ -74,3 +74,9 @@ position = Vector2(463, 246)
 
 [node name="Hopper2" parent="." unique_id=1823680534 instance=ExtResource("8_5vw27")]
 position = Vector2(37, 253)
+
+[node name="Caldera2" parent="." unique_id=1246128132 instance=ExtResource("12_dg77c")]
+position = Vector2(811, 781)
+
+[node name="Caldera3" parent="." unique_id=1524159943 instance=ExtResource("12_dg77c")]
+position = Vector2(574, 782)
