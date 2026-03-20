@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://hk4qg7s51d60"]
+
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_7wq4o"]
+[ext_resource type="AudioStream" uid="uid://bn5yg7vk4anwn" path="res://menus/sound_effects/pause.ogg" id="1_ds8ui"]
+
+[resource]
+script = ExtResource("1_7wq4o")
+type = "pause"
+audio_stream = ExtResource("1_ds8ui")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

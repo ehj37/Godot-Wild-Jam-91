@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://dst175ua7700p"]
+
+[ext_resource type="AudioStream" uid="uid://c5qkd4ep7wnh0" path="res://menus/sound_effects/resume_click.ogg" id="1_qw3o5"]
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_vb4ed"]
+
+[resource]
+script = ExtResource("1_vb4ed")
+type = "resume_click"
+audio_stream = ExtResource("1_qw3o5")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

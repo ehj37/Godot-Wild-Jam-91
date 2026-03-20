@@ -31,6 +31,7 @@ func play_effect_at(
 		screen_coords
 	)
 	audio_stream_player.max_distance = MAX_DISTANCE
+	audio_stream_player.bus = "SoundEffects"
 
 	add_child(audio_stream_player)
 

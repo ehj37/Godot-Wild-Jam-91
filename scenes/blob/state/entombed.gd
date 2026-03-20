@@ -9,7 +9,7 @@ var _damage_cooldown: bool = false
 
 # If not on cooldown, further damage the statue on any key press/mouse click
 func handle_input(event: InputEvent) -> void:
-	if _damage_cooldown:
+	if _damage_cooldown || MainMenu.visible == true:
 		return
 
 	if not event is InputEventKey and not event is InputEventMouseButton:

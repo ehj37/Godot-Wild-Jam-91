@@ -250,6 +250,7 @@ grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_ecc3n")
 theme_override_styles/fill = SubResource("StyleBoxFlat_rqqt7")
 max_value = 1.0
+step = 0.001
 show_percentage = false
 
 [connection signal="transfer_away_requested" from="TransferArea" to="." method="_on_transfer_area_transfer_away_requested"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://figbbf8pcrsb"]
+
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_ipgxi"]
+[ext_resource type="AudioStream" uid="uid://1mlwfele47v2" path="res://menus/sound_effects/unpause.ogg" id="1_s6q72"]
+
+[resource]
+script = ExtResource("1_ipgxi")
+type = "unpause"
+audio_stream = ExtResource("1_s6q72")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

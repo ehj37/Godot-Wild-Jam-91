@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://cf2hr0u3m355j"]
+
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_pwwuc"]
+[ext_resource type="AudioStream" uid="uid://ds1va7v81vxf3" path="res://menus/sound_effects/button_hover.ogg" id="1_uvxmr"]
+
+[resource]
+script = ExtResource("1_pwwuc")
+type = "button_hover"
+audio_stream = ExtResource("1_uvxmr")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"

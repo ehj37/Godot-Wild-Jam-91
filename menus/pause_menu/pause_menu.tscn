@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://ctkwsv04fymdb"]
+
+[ext_resource type="Script" uid="uid://b512avecjxfi5" path="res://menus/pause_menu/pause_menu.gd" id="1_5hbt6"]
+[ext_resource type="Theme" uid="uid://bg52xtwgkwdrc" path="res://menus/menu_theme.tres" id="2_jwttc"]
+[ext_resource type="Shader" uid="uid://diwdkh1wy4mn8" path="res://menus/pause_menu/blur_shader.gdshader" id="2_qd56w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4s7ec"]
+shader = ExtResource("2_qd56w")
+shader_parameter/blur_amount = 1.5
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1029648608]
+process_mode = 3
+script = ExtResource("1_5hbt6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2105162876]
+material = SubResource("ShaderMaterial_4s7ec")
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1899788477]
+offset_right = 320.0
+offset_bottom = 180.0
+theme = ExtResource("2_jwttc")
+
+[node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=730537925]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/MainButtons" unique_id=49352804]
+layout_mode = 2
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/MainButtons" unique_id=1358811410]
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MainButtons" unique_id=1259145546]
+layout_mode = 2
+text = "Quit"
+
+[node name="SettingsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=905707145]
+visible = false
+layout_mode = 2
+
+[node name="MainVolumeContainer" type="VBoxContainer" parent="CenterContainer/SettingsMenu" unique_id=704751627]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MainVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/MainVolumeContainer" unique_id=1383743269]
+layout_mode = 2
+text = "Main volume"
+
+[node name="MainVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/MainVolumeContainer" unique_id=152980158]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="SoundEffectsVolumeContainer" type="VBoxContainer" parent="CenterContainer/SettingsMenu" unique_id=555424345]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer" unique_id=1615424062]
+layout_mode = 2
+text = "Sound effects volume"
+
+[node name="SoundEffectsVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer" unique_id=1805377355]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="MusicVolumeContainer" type="VBoxContainer" parent="CenterContainer/SettingsMenu" unique_id=966629609]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MusicVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/MusicVolumeContainer" unique_id=684126496]
+layout_mode = 2
+text = "Music volume"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/MusicVolumeContainer" unique_id=1755325125]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="BackButton" type="Button" parent="CenterContainer/SettingsMenu" unique_id=645449145]
+layout_mode = 2
+text = "Back"
+
+[connection signal="mouse_entered" from="CenterContainer/MainButtons/ResumeButton" to="." method="_on_button_hover"]
+[connection signal="pressed" from="CenterContainer/MainButtons/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/MainButtons/SettingsButton" to="." method="_on_button_hover"]
+[connection signal="pressed" from="CenterContainer/MainButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/MainButtons/QuitButton" to="." method="_on_button_hover"]
+[connection signal="pressed" from="CenterContainer/MainButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="CenterContainer/SettingsMenu/MainVolumeContainer/MainVolumeSlider" to="." method="_on_main_volume_slider_value_changed"]
+[connection signal="value_changed" from="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer/SoundEffectsVolumeSlider" to="." method="_on_sound_effects_volume_slider_value_changed"]
+[connection signal="value_changed" from="CenterContainer/SettingsMenu/MusicVolumeContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="mouse_entered" from="CenterContainer/SettingsMenu/BackButton" to="." method="_on_button_hover"]
+[connection signal="pressed" from="CenterContainer/SettingsMenu/BackButton" to="." method="_on_back_button_pressed"]

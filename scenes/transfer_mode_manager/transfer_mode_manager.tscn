@@ -152,6 +152,7 @@ script = ExtResource("1_byknq")
 material = SubResource("ShaderMaterial_4gtk3")
 offset_right = 320.0
 offset_bottom = 180.0
+mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=49685073]
 libraries/ = SubResource("AnimationLibrary_kjky2")
