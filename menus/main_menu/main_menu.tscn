@@ -33,7 +33,6 @@ offset_bottom = 191.0
 theme = ExtResource("2_1nwmw")
 
 [node name="MainMenuButtons" type="VBoxContainer" parent="CenterContainer" unique_id=1221798859]
-visible = false
 layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/MainMenuButtons" unique_id=1610244785]
@@ -54,6 +53,7 @@ layout_mode = 2
 text = "QUIT"
 
 [node name="SettingsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=238706143]
+visible = false
 layout_mode = 2
 
 [node name="MainVolumeContainer" type="VBoxContainer" parent="CenterContainer/SettingsMenu" unique_id=9901402]
