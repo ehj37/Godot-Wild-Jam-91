@@ -4,8 +4,9 @@
 
 [resource]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-Button/font_sizes/font_size = 12
+Button/font_sizes/font_size = 6
 Button/fonts/font = ExtResource("1_o2r72")
-Label/colors/font_color = Color(1, 0, 1, 1)
+HSlider/icons/grabber = null
+Label/colors/font_color = Color(0.8901961, 0.83137256, 0.92941177, 1)
 Label/font_sizes/font_size = 6
 Label/fonts/font = ExtResource("1_o2r72")

@@ -14,7 +14,7 @@ var player_controlled: bool = false:
 @onready var transfer_area: TransferArea = $TransferArea
 @onready var step_cooldown_timer: Timer = $StepCooldownTimer
 @onready var ground_detector: Area2D = $GroundDetector
-@onready var ledge_detector: Area2D = $GroundDetector
+@onready var ledge_detector: Area2D = $LedgeDetector
 @onready var obstacle_detector: Area2D = $ObstacleDetector
 @onready var deblob_cavity: Marker2D = $DeblobCavity
 

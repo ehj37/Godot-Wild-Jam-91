@@ -2,6 +2,8 @@ class_name FadeInLabel
 
 extends Label
 
+signal finished
+
 @export var fade_in_time: float = 0.5
 
 var _fade_in_called: bool = false
@@ -19,6 +21,10 @@ func fade_in() -> void:
 	var fade_in_tween: Tween = get_tree().create_tween()
 	fade_in_tween.tween_property(self, "modulate:a", 1.0, fade_in_time)
 	_fade_in_called = true
+
+	await fade_in_tween.finished
+
+	finished.emit()
 
 
 func _ready() -> void:

@@ -13,7 +13,7 @@ point_count = 2
 size = Vector2(32, 8)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_1y40a"]
-_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACcAAAAUklGRpQAAABXRUJQVlA4TIcAAAAvH8ADEC9AEECSQ5PNPs8cCtlGgC5n8EGdv8KJqGkkBbq3pkIQ/rXgYf4DwP67Ew27zgKj2raVIAm+FTjrBfhYgG8BkNe/DDJiHtF/BQkCIBhjut+h5h3VTV8Ixpi9QYUMAskbictSlgfrsowRMg8Exu+1bBKZLAjeyLXV9fZaaqqlnoq+cwAA")
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACiAAAAUklGRpoAAABXRUJQVlA4TI4AAAAvH8ADEC9AEECSQ5PNPs8cCtlGgC5n8EGdv8KJqGkkBbq3pkIQ/rXgYf4DwP67Ew27zoKb2LZd5QMKfjKw577+RwEvCUjHvxlCRR/RfwUJAiAYY4a/Q+N3pFtfWMdxLBkSBDDwy2jbqdx0SqfurvO14XKtuIpzvfL6vRxGTyAYxjJav9P19hSTTzE1oe9U")
 size_override = Vector2(32, 16)
 
 [node name="HorizontallyMovingPlatform" type="Node2D" unique_id=461234372]
@@ -24,8 +24,8 @@ curve = SubResource("Curve2D_1y40a")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1779199319]
 z_index = 1
-position = Vector2(81.99786, 0)
-progress = 82.0
+position = Vector2(156.01382, 0)
+progress = 156.0
 rotates = false
 loop = false
 
@@ -63,4 +63,4 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/horizontally_moving_platform/horizontally_moving_platform.aseprite",
 "source_uid": 2253034403930680769
 }
-metadata/_aseprite_wizard_source_file_hash_ = "b3f42e6787ac0d6ee4e32469e88f786c"
+metadata/_aseprite_wizard_source_file_hash_ = "b647f5d9bb910832e23113cae504ff6e"

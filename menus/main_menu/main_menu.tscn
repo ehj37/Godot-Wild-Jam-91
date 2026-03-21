@@ -15,23 +15,25 @@ script = ExtResource("1_chmv6")
 [node name="Label" type="Label" parent="." unique_id=145892952]
 layout_mode = 0
 offset_left = 120.0
-offset_top = 35.0
-offset_right = 225.0
-offset_bottom = 58.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
+offset_top = 26.0
+offset_right = 318.0
+offset_bottom = 68.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_vu5tu")
 theme_override_font_sizes/font_size = 18
-text = "TITLE"
+text = "CHANGING OF
+THE SHELL"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1231094521]
 layout_mode = 0
-offset_left = 235.0
-offset_top = 20.0
-offset_right = 339.0
-offset_bottom = 156.0
+offset_left = 227.0
+offset_top = 55.0
+offset_right = 331.0
+offset_bottom = 191.0
 theme = ExtResource("2_1nwmw")
 
 [node name="MainMenuButtons" type="VBoxContainer" parent="CenterContainer" unique_id=1221798859]
+visible = false
 layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/MainMenuButtons" unique_id=1610244785]
@@ -52,7 +54,6 @@ layout_mode = 2
 text = "QUIT"
 
 [node name="SettingsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=238706143]
-visible = false
 layout_mode = 2
 
 [node name="MainVolumeContainer" type="VBoxContainer" parent="CenterContainer/SettingsMenu" unique_id=9901402]
@@ -61,7 +62,8 @@ theme_override_constants/separation = 0
 
 [node name="MainVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/MainVolumeContainer" unique_id=143967195]
 layout_mode = 2
-text = "MAIN VOLUME"
+text = "MAIN
+VOLUME"
 
 [node name="MainVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/MainVolumeContainer" unique_id=694799771]
 layout_mode = 2
@@ -74,7 +76,8 @@ theme_override_constants/separation = 0
 
 [node name="SoundEffectsVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer" unique_id=1995886583]
 layout_mode = 2
-text = "SOUND EFFECTS VOLUME"
+text = "SOUND EFFECTS
+VOLUME"
 
 [node name="SoundEffectsVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer" unique_id=379757079]
 layout_mode = 2

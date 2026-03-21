@@ -28,15 +28,15 @@ layout_mode = 2
 
 [node name="ResumeButton" type="Button" parent="CenterContainer/MainButtons" unique_id=49352804]
 layout_mode = 2
-text = "Resume"
+text = "RESUME"
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/MainButtons" unique_id=1358811410]
 layout_mode = 2
-text = "Settings"
+text = "SETTINGS"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/MainButtons" unique_id=1259145546]
 layout_mode = 2
-text = "Quit"
+text = "QUIT"
 
 [node name="SettingsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=905707145]
 visible = false
@@ -48,7 +48,7 @@ theme_override_constants/separation = 0
 
 [node name="MainVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/MainVolumeContainer" unique_id=1383743269]
 layout_mode = 2
-text = "Main volume"
+text = "MAIN VOLUME"
 
 [node name="MainVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/MainVolumeContainer" unique_id=152980158]
 layout_mode = 2
@@ -61,7 +61,7 @@ theme_override_constants/separation = 0
 
 [node name="SoundEffectsVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer" unique_id=1615424062]
 layout_mode = 2
-text = "Sound effects volume"
+text = "SOUND EFFECTS VOLUME"
 
 [node name="SoundEffectsVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/SoundEffectsVolumeContainer" unique_id=1805377355]
 layout_mode = 2
@@ -74,7 +74,7 @@ theme_override_constants/separation = 0
 
 [node name="MusicVolumeLabel" type="Label" parent="CenterContainer/SettingsMenu/MusicVolumeContainer" unique_id=684126496]
 layout_mode = 2
-text = "Music volume"
+text = "MUSIC VOLUME"
 
 [node name="MusicVolumeSlider" type="HSlider" parent="CenterContainer/SettingsMenu/MusicVolumeContainer" unique_id=1755325125]
 layout_mode = 2
@@ -83,7 +83,7 @@ step = 0.001
 
 [node name="BackButton" type="Button" parent="CenterContainer/SettingsMenu" unique_id=645449145]
 layout_mode = 2
-text = "Back"
+text = "BACK"
 
 [connection signal="mouse_entered" from="CenterContainer/MainButtons/ResumeButton" to="." method="_on_button_hover"]
 [connection signal="pressed" from="CenterContainer/MainButtons/ResumeButton" to="." method="_on_resume_button_pressed"]

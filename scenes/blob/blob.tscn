@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="10_6b3j6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k5wan"]
-radius = 3.0
-height = 10.0
+radius = 4.0
+height = 14.0
 
 [sub_resource type="Animation" id="Animation_6b3j6"]
 length = 0.4
@@ -157,7 +157,7 @@ _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAEAAAACSAQAAUklGRooBAABXRUJQVlA4TH4
 size_override = Vector2(96, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
-size = Vector2(8, 2)
+size = Vector2(12, 2)
 
 [node name="Blob" type="RigidBody2D" unique_id=1924219276]
 collision_layer = 64
@@ -280,7 +280,6 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_8afob")
 
 [node name="StateMachineLabel" type="Label" parent="." unique_id=750354709]
-visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
