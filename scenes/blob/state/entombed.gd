@@ -18,7 +18,7 @@ func handle_input(event: InputEvent) -> void:
 	if _hp > 0:
 		_hp -= 1
 		blob.sprite_statue.region_rect.position.x += 32
-		SoundEffectManager.play_effect_at(_get_damage_sound_effect(), blob.global_position)
+		SoundEffectManager.play_effect(_get_damage_sound_effect())
 		_spawn_damage_particles()
 
 		_damage_cooldown = true
@@ -53,7 +53,7 @@ func exit() -> void:
 	blob.sprite_statue.visible = false
 	blob.sprite.visible = true
 	blob.animation_player.play("jump_up")
-	SoundEffectManager.play_effect_at(_get_emerge_sound_effect(), blob.global_position)
+	SoundEffectManager.play_effect(_get_emerge_sound_effect())
 	blob.apply_central_impulse(Vector2.UP * SPAWN_IMPULSE_MAGNITUDE)
 
 

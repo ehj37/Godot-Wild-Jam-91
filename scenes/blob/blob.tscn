@@ -149,7 +149,7 @@ _data = {
 }
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_6b3j6"]
-_data = PackedByteArray("AAADAAUAAAABAAAAgAEAAIABAADQAQAAUklGRsgBAABXRUJQVlA4TLwBAAAvf8FfEBcw//M///MfgAfptfXGbSSeE3RguB6WwB/4vBSmhrM9gkIy+yii/xDcSFIkeY8xcmAfsf036xGNiDq6sCvfEaTLwZjosHxHckdMdIi7Du7QrlxH1650J+7QjQ6rVLsjvkCHvFaH3jrKP07//ek2/NsxbLG4LidfjTNHI90oi6U7QttEZy4sdiV3DiQ0MKRLjTpxp27YoSTphjueyGn2xI4n407u+FxHY6ozJ15xB+4wwDvThJ2a6BZe5aOBLWzisin/OP33q6dbdcOX72z5HejKXdkd3biDrd7ZfXV3XJfvXI871ncr3/XdCNW3/stfzfh2DeOOfPfRet4137FaP/6Np5+HefeKjvKP03+/37TyrLru1Y2fbS8sqrmEGlGx+yQkQ8XukyF5Uqgdq0siN8LH9TJxIB13GB6XJ/4aZ6lR9xPCsSOkG7+jDsP3ktFhlj6fgWESv5Nv5R+n//661Vu5HUZkh7uQ4ZQh6ujy7GGRYbfwOImykKRcR5fUsKt9LvSkzomO3Wj37thh3Jk7LiE1ypBTpoRduFM+cVzLP07//W0ovLiu6oZu1T+XilN1vbzx5pzisQE=")
+_data = PackedByteArray("AAADAAUAAAABAAAAgAEAAIABAADOAQAAUklGRsYBAABXRUJQVlA4TLoBAAAvf8FfEBcw//M///MfgAfZse22DSTOLDowXA9K4AeeQ2FqeNMVKGwOiug/BEeSHEWBhzNZuEds/8065CCijhB21TuShBzMAx1W7yjuyAMd4q6TO7Sr1hHaVe7EHXrQ0yr17shvoEPeq0OfOtofLv/96Tb9u2PaYnlfTr4aZ85BwiiLlTtS24HOWljuKu6cSGhiSEiDOnGnHtihIumBO97IafaBHW9W6wzRWaB5qLMmP+IO3GGAd5YJO8Xd2DnHHGBL4z/U/nD575dPWHfTl+8c9R3ozl3VHWHcwVbvDF/dnfflO9fjjvXdqnd9b6T6W3/3t2Z+d03jjnr32aLuXu9YLc4/G+XvYd69oqP94fLf7zejPesuvLv5s+0Dy25uqUHU7HOSkqFmn5MpeVFqnCskkQfh5/V24Il03GH4vLzx1zhLg7rfEI4dKT34gjoMLyWjp1n6+gwMk/hCvrU/XP7761aMdjuMyE53I9MpQ9QR8urTIsNu4fMkykKSah0haWDX+LrUmzoPdOxGu3fHDuPO2vOS0qAMOWVK2IU75Qee1/aHy39/G0pvLtTd1KP7bak5dRftzU+uKQ4b")
 size_override = Vector2(384, 384)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ydn06"]
@@ -239,7 +239,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/blob/blob.aseprite",
 "source_uid": 6447877206398014428
 }
-metadata/_aseprite_wizard_source_file_hash_ = "5b2b21b8ba219e2fed6474dab7914473"
+metadata/_aseprite_wizard_source_file_hash_ = "5e4ce85cdffb315628f7475694ee9b4d"
 
 [node name="SpriteStatue" type="Sprite2D" parent="." unique_id=315027220]
 visible = false
@@ -287,7 +287,7 @@ theme_override_colors/font_color = Color(0, 1, 1, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="JumpCooldownTimer" type="Timer" parent="." unique_id=1201363380]
-wait_time = 0.8
+wait_time = 0.7
 one_shot = true
 
 [node name="TransferArea" parent="." unique_id=1022541394 instance=ExtResource("10_6b3j6")]

@@ -1,7 +1,7 @@
 extends BlobState
 
-const TIME_FOR_SPLAT: float = 0.25
-const FALL_ANIMATION_SPEED_THRESHOLD: float = 140.0
+const TIME_FOR_SPLAT: float = 0.3
+const FALL_ANIMATION_SPEED_THRESHOLD: float = 160.0
 
 var _airborne_time: float = 0.0
 var _fall_animation_played: bool = false

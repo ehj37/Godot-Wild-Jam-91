@@ -11,11 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://c0hymfdv762x8" path="res://scenes/transfer_area/transfer_area.tscn" id="8_ryboi"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ecc3n"]
-_data = PackedByteArray("AAADAAUAAAABAAAAgAAAAIAAAADMAQAAUklGRsQBAABXRUJQVlA4TLgBAAAvf8AfEC+gkI0kaBleh2U73YNT1LYNVDQnur5GeEQUtW0D9Vn+yArj2jjMfwDw/3t0tPVwAtiRJNdtTgUEIJSdARNAaR3A+ZGB80+Gxt3eguU/fkT0H4LbNpIke2b23qWzv7A7VQHu2OucABpjoelOxnyVHYgNjom1L+pATOJIWbUddUc50GPFQNhhuoPGrsoOxzgrOEbSqiMABEd3W+rWicP6Bsf1CdwQt//nuJl1ookONDUAJMcEhB0TS48YxBKWsAPUhZCDOwo71AD6Ljqj6Q66g8e2O1qcMc4CsKpD3jHGCL+p7Eha3dHdAqCLDrdOd+xPwZFzzN10h579O242ndgdNPoENq8EewBA27dzYil7D68m7ySfwYF8RemFs4ITiYO7yr+b7gSdWXmuqolW2zmlt9QJ5mrbc9BkrLfx16pj0hfQjLMPM3PnjmpG0jU9+NyZoxfSVk8nTrduuefHO/M8R+wj7ouwME9tz5zJCwGoccvudFsu1l74TNquycwCcgfZ2gr5xa47RBXNzwe0O7TynZ8jFtDvUNrlPfk/6Hco70oj34HlA4Vod/henf4+Qj/PyOVOAw==")
-size_override = Vector2(128, 128)
+_data = PackedByteArray("AAADAAUAAAABAAAAoAAAAIAAAAAcAgAAUklGRhQCAABXRUJQVlA4TAcCAAAvn8AfEDegEJIV6jF8HYLLNp44yEQwPo8TzqSwFiY1bSMxNx5/ZA+k13n+A8DNtrR+/zZSjADk1rbjNt8wuffYgQsQwBRAmM97ZurA/Rch//8fByErB4jovwO3bRxJ2utNyd4r5J1cgHfM7V4KEHx4h2SEod0FuPuktYN3wyQpve7FZNz9DqxavA43LOGmWaD0uguMzR2Jdzhh5pdoV0eHtHcRQMle9/COwMeajmhGdBxXB3YcHVs7TMDAjlhFWSWSDokTOraHyTdU+Xs63vzNCASE2QBwWQpa5hrWkZQOS1otaJprVEeC9mYotoPPNawDyqaO5rnQO3d2CLyDz9ndwZHujjCoA8BxtWPsPLzjeDw636QCHCc9lljFBETSUSXyubo7+hnWEU1HNTk9HYOoXgdnfIe9cgLea82YDQK9AFNZCthRVsLEe6mA7CElAPdZLEnfu8ELgXIWBVa7cqdjFEnr/Jol0LlY6D437wksPNPbDEpK6FtU9sAgYL05LK89NfCEzbwcX4qwjoa5Dfp/87Gn/D4Ux9WdiNQqwjpaaDtPh6MVivjqNfgdsYHQNleNQqwSTXdU/Nbo9bC5dy3nydcZv9dYnYEZD0BmWCWS81CvR+Pnyj9lk3Y7wDFsg+wBf0/7DfDUQPtRECbz+wDf0xwORysozznU2LynnwcgW7Bej8bPGQgA")
+size_override = Vector2(160, 128)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_rqqt7"]
-_data = PackedByteArray("AAADAAUAAAABAAAAoAAAAIAAAAC6AAAAUklGRrIAAABXRUJQVlA4TKUAAAAvn8AfEBcw//M///MfgAfHsW2nzTdI8jK85j5UgumW4P6bEIeTTUT/1bZtwzBlte+QP83UxXt1xXt38lIG0gJ6ABUOEEkK+JfOrhg8tspWuXpJ1Xlmz+xZJaf0VSyu9QOirJSalTzA9ADq3tWd3jOg5F8+XVQdoZJSksamkESHXPPe1d9yLUssxYIKAnBqwd59jt5vAaDk3ztHeatjQZXQs5d3MAIA")
+_data = PackedByteArray("AAADAAUAAAABAAAAoAAAAIAAAADAAAAAUklGRrgAAABXRUJQVlA4TKsAAAAvn8AfEBcw//M///MfgAe3sW2ryvn+Q+zllPJK+Lbp4PffxHMckoj+M3DbthE7bp/9Dv1pRl2811i896iXMiAtYALowgFSUsC/dFyKwWOrbJVrUqrRs3k2zyE5Zapica0fEGVVahz0AGMC6O5d3em9AZ3+26MLGKPqMGsUH2PacaLU9XTLtRnPnmvfvRS8OOiCANxaGHczzi/9FgCd/r3jqrc6LHQlTBi9gyEA")
 size_override = Vector2(160, 128)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ecc3n"]
@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [6, 7, 7, 7, 7]
+"values": [6, 7, 8, 7, 7]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -61,7 +61,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.075, 0.15, 0.225, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [11, 12, 13, 14, 15]
+"values": [12, 13, 14, 15, 16]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -115,7 +115,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [9, 10]
+"values": [10, 11]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -143,7 +143,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -246,9 +246,9 @@ metadata/_custom_type_script = "uid://w136weujw0cu"
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_ecc3n")
 offset = Vector2(0, -16)
-hframes = 4
+hframes = 5
 vframes = 4
-frame = 5
+frame = 6
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}
@@ -271,7 +271,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/hopper/hopper.aseprite",
 "source_uid": 1047779990437142067
 }
-metadata/_aseprite_wizard_source_file_hash_ = "fb2ed7ea055f8e2708dc81d02eac7379"
+metadata/_aseprite_wizard_source_file_hash_ = "48680a6d341edd05f2a14d152e90823f"
 
 [node name="SpriteBlob" type="Sprite2D" parent="." unique_id=2052524992]
 texture_filter = 1
@@ -302,7 +302,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/hopper/hopper.aseprite",
 "source_uid": 1047779990437142067
 }
-metadata/_aseprite_wizard_source_file_hash_ = "2ba9de6c3bddd4b07e21f13d8ddd12dd"
+metadata/_aseprite_wizard_source_file_hash_ = "48680a6d341edd05f2a14d152e90823f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717486748]
 position = Vector2(0, -4)

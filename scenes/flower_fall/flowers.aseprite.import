@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://3h5ofooqu7mo"
+path="res://.godot/imported/flowers.aseprite-fb7ab292f63cb48bccde9ec4c1ab74cf.res"
+
+[deps]
+
+source_file="res://scenes/flower_fall/flowers.aseprite"
+dest_files=["res://.godot/imported/flowers.aseprite-fb7ab292f63cb48bccde9ec4c1ab74cf.res"]
+
+[params]
+

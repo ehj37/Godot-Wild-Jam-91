@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b1wwrgrrpv88b" path="res://scenes/ground/ground.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://35jlnp8hxpp1" path="res://scenes/player_camera/player_camera.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cybj56ytho50h" path="res://scenes/hollow/hollow.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://4cgobopujnfy" path="res://scenes/flower_fall/flower_fall.tscn" id="5_vivmo"]
 [ext_resource type="PackedScene" uid="uid://x52lelscyoxw" path="res://scenes/elevator/elevator.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bk061an1f3xaw" path="res://scenes/hopper/hopper.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://c2t6601vlgkt3" path="res://scenes/horizontally_moving_platform/horizontally_moving_platform.tscn" id="9_kek77"]
@@ -37,6 +38,9 @@ tile_map_data = PackedByteArray("AAABABMAAAADAAQAAAACABMAAAAFAAQAAAADABMAAAACAAQ
 
 [node name="Intro" type="Node2D" parent="." unique_id=801723092]
 y_sort_enabled = true
+
+[node name="FlowerFall" parent="Intro" unique_id=962931816 instance=ExtResource("5_vivmo")]
+position = Vector2(-26, -229)
 
 [node name="MoveFadeInLabel" parent="Intro" unique_id=111311089 instance=ExtResource("14_w48qg")]
 offset_left = 111.0
@@ -285,6 +289,9 @@ position = Vector2(-983, 464)
 
 [node name="FinalEffigy" parent="." unique_id=716301830 instance=ExtResource("14_vivmo")]
 position = Vector2(-2120, -104)
+
+[node name="FlowerFall" parent="." unique_id=1531093695 instance=ExtResource("5_vivmo")]
+position = Vector2(-2209, -192)
 
 [node name="ThankYouFadeInLabel" parent="." unique_id=331544937 instance=ExtResource("14_w48qg")]
 offset_left = -2208.0

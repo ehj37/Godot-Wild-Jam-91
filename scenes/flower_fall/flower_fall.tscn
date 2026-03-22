@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://4cgobopujnfy"]
+
+[ext_resource type="Texture2D" uid="uid://c52v2yhjmgg8n" path="res://scenes/flower_fall/flowers.png" id="1_yo7qg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_12ndh"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_yo7qg"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_12ndh"]
+curve = SubResource("Curve_yo7qg")
+
+[sub_resource type="Curve" id="Curve_12ndh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.2984293, 0.79268295), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_5sfka"]
+curve = SubResource("Curve_12ndh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3use8"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 100.0
+direction = Vector3(1, 1, 0)
+spread = 30.0
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+alpha_curve = SubResource("CurveTexture_12ndh")
+anim_speed_curve = SubResource("CurveTexture_5sfka")
+anim_offset_max = 1.0
+turbulence_noise_scale = 4.0
+
+[node name="FlowerFall" type="GPUParticles2D" unique_id=962931816]
+z_index = 10
+material = SubResource("CanvasItemMaterial_12ndh")
+amount = 20
+texture = ExtResource("1_yo7qg")
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_3use8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1988682485]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_yo7qg")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": false,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://scenes/flower_fall/flowers.aseprite",
+"source_uid": 1981585061943300998
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7b96a2526cd5abd6be747683c6793733"

@@ -3,9 +3,6 @@ extends BlobState
 const MOVE_FORCE_MAGNITUDE: float = 2100.0
 const MOVE_LINEAR_DAMP: float = 10.0
 
-@onready var sound_effect_config_crawl: SoundEffectConfig = preload(
-	"res://scenes/blob/sound_effects/blob_crawl.tres"
-)
 @onready var _sound_effect_timer: Timer = $SoundEffectTimer
 
 
@@ -45,6 +42,10 @@ func exit() -> void:
 	_sound_effect_timer.stop()
 
 
+func _get_crawl_sound_effect_config() -> SoundEffectConfig:
+	return load("res://scenes/blob/sound_effects/blob_crawl.tres")
+
+
 func _on_sound_effect_timer_timeout() -> void:
-	SoundEffectManager.play_effect_at(sound_effect_config_crawl, blob.global_position)
+	SoundEffectManager.play_effect(_get_crawl_sound_effect_config())
 	_sound_effect_timer.start()
