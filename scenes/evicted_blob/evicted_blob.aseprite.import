@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b1wsl7jptchoj"
+path="res://.godot/imported/evicted_blob.aseprite-188bce4529c9f5c1b668b32f5cee1ee3.res"
+
+[deps]
+
+source_file="res://scenes/evicted_blob/evicted_blob.aseprite"
+dest_files=["res://.godot/imported/evicted_blob.aseprite-188bce4529c9f5c1b668b32f5cee1ee3.res"]
+
+[params]
+

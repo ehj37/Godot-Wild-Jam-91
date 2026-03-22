@@ -2,7 +2,7 @@
 
 extends Node2D
 
-const MOVE_SPEED: float = 0.5
+const MOVE_SPEED: float = 25.0
 const WAIT_TIME: float = 2.0
 
 @export var max_distance: float:
@@ -16,11 +16,11 @@ var _waiting: bool = false
 @onready var path_follow: PathFollow2D = $Path2D/PathFollow2D
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if _moving_right:
-		path_follow.progress += MOVE_SPEED
+		path_follow.progress += MOVE_SPEED * delta
 	else:
-		path_follow.progress -= MOVE_SPEED
+		path_follow.progress -= MOVE_SPEED * delta
 
 	if _waiting:
 		return

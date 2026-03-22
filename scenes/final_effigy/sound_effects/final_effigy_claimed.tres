@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectConfig" format=3 uid="uid://61s08msw4dkh"]
+
+[ext_resource type="Script" uid="uid://cwvsofibb2vp6" path="res://audio/sound_effect_config.gd" id="1_0i8rr"]
+[ext_resource type="AudioStream" uid="uid://buvonq6sou4w1" path="res://scenes/final_effigy/sound_effects/final_effigy_claimed.ogg" id="1_k5pgs"]
+
+[resource]
+script = ExtResource("1_0i8rr")
+type = "final_effigy_claimed"
+audio_stream = ExtResource("1_k5pgs")
+metadata/_custom_type_script = "uid://cwvsofibb2vp6"
