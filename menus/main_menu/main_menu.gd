@@ -48,6 +48,8 @@ func _on_start_button_pressed() -> void:
 	var sound_effect_config: SoundEffectConfig = _get_start_click_sound_effect_config()
 	SoundEffectManager.play_effect(sound_effect_config)
 
+	MusicManager.play_main_theme()
+
 	visible = false
 	started.emit()
 

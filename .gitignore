@@ -18,3 +18,4 @@ mono_crash.*.json
 
 # Misc.
 **/.DS_Store
+builds/
