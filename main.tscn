@@ -300,7 +300,7 @@ offset_left = -2208.0
 offset_top = -49.0
 offset_right = -1986.0
 offset_bottom = -33.25
-text = "HOPEFULLY THIS NEW ONE SUITS YOU WELL"
+text = "HOPEFULLY THIS NEW HOME SUITS YOU WELL"
 fade_in_time = 4.0
 
 [connection signal="statue_broken" from="Blob" to="Intro/MoveFadeInLabel" method="fade_in"]

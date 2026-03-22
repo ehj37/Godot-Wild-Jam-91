@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c6sjfjq02ai71" path="res://scenes/final_effigy/final_effigy.gd" id="1_cbut6"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_cbut6"]
-_data = PackedByteArray("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")
+_data = PackedByteArray("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")
 size_override = Vector2(512, 512)
 
 [sub_resource type="Animation" id="Animation_78pr3"]
@@ -24,7 +24,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_cbut6"]
-length = 2.7
+length = 2.95
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -46,10 +46,10 @@ tracks/1/path = NodePath("Sprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.8, 2.2, 2.3, 2.4, 2.5, 2.6),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 2.05, 2.45, 2.55, 2.65, 2.75, 2.85),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 10, 11, 12, 13, 0]
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cbut6"]
@@ -95,7 +95,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scenes/final_effigy/final_effigy.aseprite",
 "source_uid": 4047078353479883910
 }
-metadata/_aseprite_wizard_source_file_hash_ = "04b2f0cd1f88b8d207a61fccc7c562a7"
+metadata/_aseprite_wizard_source_file_hash_ = "fcad63a684e5066c933bc09dcf779783"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1099004671]
 libraries/ = SubResource("AnimationLibrary_cbut6")
