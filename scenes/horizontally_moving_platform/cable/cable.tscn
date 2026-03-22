@@ -13,6 +13,7 @@ tile_size = Vector2i(16, 8)
 sources/0 = SubResource("TileSetAtlasSource_biows")
 
 [node name="Cable" type="TileMapLayer" unique_id=1051447385]
+z_index = -9
 tile_set = SubResource("TileSet_es4px")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=982037465]
